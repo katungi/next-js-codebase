@@ -21,9 +21,9 @@ export default function banner() {
           </Button>
         </div>
         <div className={style.banner__info}>
-          <h1>Make KSH 105,000 hosting Experiences!!</h1>
+          <h1>Make KSH 100,000 hosting Experiences!!</h1>
           <h5>
-            Choose an adventure and take a tour on our wide range of experiences
+            Choose an adventure and take a tour on our wide range of experiences.
           </h5>
           <Button onClick={() => router.push("/search")} variant="outlined">
             Explore Nearby
