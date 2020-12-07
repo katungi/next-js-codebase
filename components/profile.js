@@ -6,7 +6,7 @@ const Profile = () => {
 
   if (loading) return <div>loading...</div>;
   if (!session) return <div>no session</div>;
-
+ 
   return (
     <Layout>
       {session && (

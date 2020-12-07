@@ -90,7 +90,7 @@ export default function header() {
                 signin();
               }}
             >
-              <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white"></button>
+              <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white">Sign Up</button>
             </a>
           )}
 
