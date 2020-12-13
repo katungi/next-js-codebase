@@ -1,22 +1,21 @@
-
-export default function Cards({ src, title, description, price }) {
+export default function Cards({experience}) {
     return (
         <div class="flex p-6">
         <div class="flex-none w-44 relative">
-          <img src={src} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" />
+          <img src={experience.image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" />
         </div>
         <form class="flex-auto pl-6">
           <div class="flex flex-wrap items-baseline">
-    <h1 class="w-full flex-none font-semibold mb-2.5">{title}</h1>
-    <div class="text-4xl leading-7 font-bold text-pink-600">{price}</div>
+    <h1 class="w-full flex-none font-semibold mb-2.5">{experience.title}</h1>
+    <div class="text-4xl leading-7 font-bold text-pink-600">{experience.category.name}</div>
             <div class="text-sm font-medium text-gray-400 ml-3">Available</div>
           </div>
           <div class="flex items-baseline my-8">
-    <p class="text-sm text-gray-500">{description}</p>
+    <p class="text-sm text-gray-500">{experience.description}</p>
           </div>
           <div class="flex space-x-3 mb-4 text-sm font-semibold">
             <div class="flex-auto flex space-x-3">
-              <button class="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white" type="submit">Book Now</button>
+              <button class="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white" type="submit">Join Experience</button>
               <button class="w-1/2 flex items-center justify-center rounded-full bg-pink-50 text-pink-700" type="button">Add to Favorites</button>
             </div>
       
