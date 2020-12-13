@@ -17,8 +17,9 @@ const queryCache = new QueryCache();
 
 export default function experiences({ experiences }) {
   const url = "http://localhost:3001/api/v1/meetups";
-  experiences = useAxiosGet(url);
-  console.log(experiences);
+   const data = useAxiosGet(url);
+   let { meetup } = data;
+//   console.log(experiences.meetups);
 
   return (
     <div>
@@ -28,7 +29,7 @@ export default function experiences({ experiences }) {
       <br />
       <Divider />
       <ExperienceList>
-        {experiences.map((experience) => (
+        {meetup.map((experience) => (
           <ExperienceCards key={experience.id} experience={experience} />
         ))}
       </ExperienceList>
