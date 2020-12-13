@@ -90,7 +90,7 @@ export default function header() {
                 signin();
               }}
             >
-              <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white">Sign Up</button>
+              <a className="w-40 h-25 flex flex-row items-center justify-center rounded-lg bg-pink-700 text-white">Sign Up</a>
             </a>
           )}
 
@@ -127,15 +127,6 @@ export default function header() {
           background-color: white;
           z-index: 100;
           width: 100%;
-        }
-        .avatar {
-        border-radius: 2rem;
-        float: left;
-        height: 2.2rem;
-        width: 2.2rem;
-        background-color: white;
-        background-size: cover;
-        border: 2px solid #ddd;
         }
         .header__icon_large {
           object-fit: contain;
