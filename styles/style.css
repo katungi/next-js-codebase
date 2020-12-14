@@ -2,3 +2,9 @@
   margin: 0px;
 }
  */
+ ::selection {
+  background:#f53398; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background:#f53398; /* Gecko Browsers */
+}
