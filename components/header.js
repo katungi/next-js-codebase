@@ -11,45 +11,13 @@ export default function header() {
 
   return (
     <>
-      {/* <div className="header">
-        <Link href="/">
-          <a>
-            <img
-              className="header__icon_large"
-              src="https://hostguest.co.ke/wp-content/uploads/2018/12/hostguest-logo-2-300x87.png"
-              alt="HostGuest"
-            />
-          </a>
-        </Link>
-        <Link href="/">
-          <a>
-            <img
-              className="header__icon_small"
-              src="/images/Host Guest Stationery 61218-05.png"
-              alt="HostGuest"
-            ></img>
-          </a>
-        </Link>
-
-        <div className="header__center">
-          <input type="text" />
-          <SearchRoundedIcon style={{ color: pink[300] }} />
-        </div>
-
-        <div className="header__right">
-          <p>Become a Host</p>
-          <LanguageRoundedIcon style={{ color: pink[300] }} />
-          <ExpandMoreRoundedIcon />
-          <Avatar />
-        </div>
-      </div> */}
       <header className="lg:px-px px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
         <div className="flex-1 flex justify-between items-center">
           <Link href="/">
             <a>
               <img
                 className="header__icon_large"
-                src="https://hostguest.co.ke/wp-content/uploads/2018/12/hostguest-logo-2-300x87.png"
+                src="../public/images/logo.png"
                 alt="HostGuest"
               />
             </a>
@@ -87,10 +55,10 @@ export default function header() {
               href="/api/auth/signin"
               onClick={(e) => {
                 e.preventDefault();
-                signin();
+                signin();  
               }}
             >
-              <a className="w-40 h-25 flex flex-row items-center justify-center rounded-lg bg-pink-700 text-white">Sign Up</a>
+              <Button className="">Sign Up</Button>
             </a>
           )}
 

@@ -1,15 +1,14 @@
 import Banner from '../components/banner'
 import Categories from '../components/categories'
 import Footer from '../components/footer'
-import Experiences from '../pages/experiences'
+import Experiences from './experiences'
 
 export default function Home() {
   return (
     <div>
-     {/* <Banner/>
-     <Categories/>
-     <Footer/> */}
-     <Experiences/>
+     <Banner/>
+     <Footer/>
+     {/* <Experiences/> */}
     </div>
   )
 }
