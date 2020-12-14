@@ -10,7 +10,7 @@ center center; */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-}
+}  
 
 .banner__info {
   /* background-color: black;
@@ -20,7 +20,7 @@ center center; */
   padding-right: 50px;
   padding-bottom: 40px;
   margin: 10px;
-  width: 400px;
+  width: 500px;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 9.0px );
   -webkit-backdrop-filter: blur( 9.0px );
@@ -53,3 +53,4 @@ center center; */
   text-transform: inherit !important;
   color: #f53398 !important;
 }
+

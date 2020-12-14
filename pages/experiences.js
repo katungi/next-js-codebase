@@ -6,11 +6,11 @@ import {
   QueryCache,
   ReactQueryCacheProvider,
 } from "react-query";
-import ExperienceCards from "../../components/experienceCards/ExperienceCards";
-import Footer from "../../components/footer";
+import ExperienceCards from "../components/experienceCards/ExperienceCards";
+import Footer from "../components/footer";
 import { Divider } from "@material-ui/core";
-import { useAxiosGet } from "../../Hooks/HttpRequests";
-import ExperienceList from "../../components/experiences";
+import { useAxiosGet } from "../Hooks/HttpRequests";
+import ExperienceList from "../components/experiences";
 import axios from 'axios';
 const queryCache = new QueryCache();
 

@@ -2,7 +2,7 @@ import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
 import { pink } from "@material-ui/core/colors";
 import LanguageRoundedIcon from "@material-ui/icons/LanguageRounded";
-import { Avatar } from "@material-ui/core";
+import { Avatar, Button } from "@material-ui/core";
 import Link from "next/link";
 import { signin, signout, useSession } from "next-auth/client";
 
@@ -12,16 +12,16 @@ export default function header() {
   return (
     <>
       <header className="lg:px-px px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
-        <div className="flex-1 flex justify-between items-center">
-          <Link href="/">
+        <div className="flex-1 flex justify-between items-center">   
+            <Link href="/">
             <a>
-              <img
+            <img
                 className="header__icon_large"
-                src="../public/images/logo.png"
+                src="/images/logo.png"
                 alt="HostGuest"
               />
             </a>
-          </Link>
+            </Link>
         </div>
         <label for="menu-toggle" className="cursor-pointer  lg:hidden block">
           <svg viewBox="0 0 100 80" width="40" height="40">
