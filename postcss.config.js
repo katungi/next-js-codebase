@@ -22,4 +22,5 @@ module.exports = {
     process.env.NODE_ENV === 'production' ? purgecss : undefined,
     'postcss-preset-env',
   ],
+  plugins: ['postcss-preset-env'],
 };
