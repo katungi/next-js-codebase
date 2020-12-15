@@ -15,11 +15,14 @@ const purgecss = [
       return broadMatches.concat(innerMatches);
     },
   },
-];
+];  
 module.exports = {
   plugins: [
     'tailwindcss',
     process.env.NODE_ENV === 'production' ? purgecss : undefined,
     'postcss-preset-env',
+  ],
+  plugins: [
+    'postcss-preset-env'
   ]
 };
