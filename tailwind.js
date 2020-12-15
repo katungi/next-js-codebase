@@ -396,8 +396,11 @@ module.exports = {
         },
       },
       pulse: {
+        "0%, 100%":{
+          opacity:0,
+        },
         '50%': {
-          opacity: '.5',
+          opacity:1,
         },
       },
       bounce: {
