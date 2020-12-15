@@ -2,25 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Cards({ experience }) {
-  const [experienceData, setExperiences] = useState([]);
-  const url = "http://localhost:3001/api/v1/meetups";
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => {
-        setExperiences(res.data.meetups[0]);
-        console.log(experienceData);
-      })
-      .catch((error) => console.log(error));
-  }, []);
   return (
     <div className="container max-w-full">
       <div className="block">
         <div className="flex flex-col md:flex-row md:max-w-4xl max-w-sm mx-auto bg-white border border-grey-500 my-5 shadow-2xl rounded-lg over-hidden">
           <div className="p-4 md:w-1/2">
             <img
-              src={experienceData.image}
+              src={experience.image}
               alt=""
               className="bg-gray-100 sm:rounded-lg"
             />
@@ -30,10 +19,10 @@ export default function Cards({ experience }) {
               <form className="flex-auto pl-6">
                 <div className="flex flex-wrap items-baseline">
                   <h1 className="w-full flex-none font-semibold mb-2.5">
-                    {experienceData.title}
+                    {experience.title}
                   </h1>
                   <div className="text-4xl leading-7 font-bold text-pink-600">
-                    KSH {experienceData.joinedPeopleCount}00
+                    KSH {experience.joinedPeopleCount}00
                   </div>
                   <div className="text-sm font-medium text-gray-400 ml-3">
                     Available
@@ -41,7 +30,7 @@ export default function Cards({ experience }) {
                 </div>
                 <div className="flex items-baseline my-8">
                   <p className="text-sm text-gray-500">
-                    {experienceData.shortInfo}
+                    {experience.shortInfo}
                   </p>
                 </div>
                 <div className="flex space-x-3 mb-4 text-sm font-semibold">
