@@ -1,8 +1,4 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-
 export default function Cards({ experience }) {
-
   return (
     <div className="container max-w-full">
       <div className="block">

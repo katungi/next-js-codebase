@@ -8,7 +8,6 @@ export default function Home() {
     <div>
      <Banner/>
      <Footer/>
-     {/* <Experiences/> */}
     </div>
   )
 }

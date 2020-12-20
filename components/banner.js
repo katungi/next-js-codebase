@@ -6,7 +6,6 @@ import { Button } from "@material-ui/core";
 
 export default function banner() {
   const router = useRouter();
-
   return (
     <>
       <div>
@@ -20,11 +19,11 @@ export default function banner() {
               experiences.
             </h5>
             <Button onClick={() => router.push("/categories")}>
-              Explore Experiences
+              Host an Experience!
             </Button>
             <br />
             <Button onClick={() => router.push("/experiences")}>
-              Become a Host!
+              Book an Experiences
             </Button>
           </div>
         </div>
