@@ -1,9 +1,8 @@
 import { QueryClient, useQuery } from "react-query";
 import axios from "axios";
-import categoryCards from '../components/experienceCards/CategoryCards';
-import ExperienceSkeleton from '../components/experienceCards/ExperienceSkeletons'
+import CategoryCards from "../components/experienceCards/CategoryCards";
+import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 export default function Categories() {
-
   const getCategories = async () => {
     const { data } = await axios.get("http://localhost:3001/api/v1/categories");
     return data;
@@ -41,14 +40,16 @@ export default function Categories() {
           </div>
         </div>
       </>
-    ); 
-  
+    );
+
   return (
-   <>
-    {data?.map((category, id) => (
-      <categoryCards ecategory={category} key={id}/>
-    ))}
-   </>
+    <div className="flex flex-wrap -mx-3 overflow-hidden sm:-mx-3 md:-mx-3 lg:-mx-4 xl:-mx-5">
+      <div className="my-3 px-3 w-full overflow-hidden sm:my-3 sm:px-3 sm:w-full md:my-3 md:px-3 md:w-full lg:my-4 lg:px-4 lg:w-1/3 xl:my-5 xl:px-5 xl:w-1/3">
+        {data?.map((category, id) => (
+          <CategoryCards category={category} key={id} />
+        ))}
+      </div>
+    </div>
   );
 }
 

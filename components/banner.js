@@ -12,7 +12,7 @@ export default function banner() {
             <h1 className="text-5xl">
               Make <mark>KSH 100,000</mark> hosting Experiences!!
             </h1>
-            <h5>
+            <h5 className="text-white">
               Choose an adventure and take a tour on our wide range of
               experiences.
             </h5>
