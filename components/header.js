@@ -46,9 +46,7 @@ export default function header() {
             </ul>
           </nav>
           <div className="header__right">
-            <p>Become a Host</p>
-            <LanguageRoundedIcon style={{ color: pink[300] }} />
-            <ExpandMoreRoundedIcon />
+            <p className="m-3 justify-center">Categories</p>
           </div>
           {!session && (
             <a

@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import style from "../styles/banner.module.css";
-import Link from "next/link";
 import { Button } from "@material-ui/core";
 
 export default function banner() {
