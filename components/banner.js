@@ -13,10 +13,10 @@ export default function banner() {
               Make <mark>KSH 100,000</mark> hosting Experiences!!
             </h1>
             <h5 className="text-white">
-              Choose an adventure and take a tour on our wide range of
-              experiences.
+              <mark>Choose an adventure and take a tour on our wide range of
+              experiences.</mark>
             </h5>
-            <Button onClick={() => router.push("/categories")}>
+            <Button onClick={() => router.push("/createExperience")}>
               Host an Experience!
             </Button>
             <br />

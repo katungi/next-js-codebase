@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import '../styles/tailwind.css';
 import '../styles/style.css'
 import Head from "next/head";
