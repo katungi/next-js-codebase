@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import Link from 'next/link'
 import {
   Form,
   Select,
@@ -83,7 +83,7 @@ export default function createExperiences() {
 
         <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
           <Button type="primary" htmlType="submit" >
-            Submit
+            <Link href="/"><a>Submit</a></Link>
           </Button>
         </Form.Item>
       </Form>
