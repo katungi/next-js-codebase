@@ -43,7 +43,7 @@ export default function header() {
             </ul>
           </nav>
           <div className="header__right">
-            <Link href="/categories"><p className="m-3 justify-center">Categories</p></Link>
+            <Link href="/categories"><a className="m-3 justify-center">Categories</a></Link>
           </div>
           {!session && (
             <a

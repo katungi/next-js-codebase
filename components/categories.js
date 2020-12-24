@@ -4,7 +4,7 @@ import CategoryCards from "../components/experienceCards/CategoryCards";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 export default function Categories() {
   const getCategories = async () => {
-    const { data } = await axios.get("http://localhost:3001/api/v1/categories");
+    const { data } = await axios.get("https://d7db63976189.ngrok.io/api/v1/categories");
     return data;
   };
   const { data, isLoading } = useQuery("categories", getCategories);

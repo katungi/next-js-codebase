@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
+import Link from "next/link"
 import style from "../styles/banner.module.css";
-import { Button } from "@material-ui/core";
 
 export default function banner() {
   const router = useRouter();
@@ -16,13 +16,10 @@ export default function banner() {
               <mark>Choose an adventure and take a tour on our wide range of
               experiences.</mark>
             </h5>
-            <Button onClick={() => router.push("/createExperience")}>
-              Host an Experience!
-            </Button>
+            <Link href="/createExperience"><a className="w-1/2 flex items-center justify-center rounded-lg bg-pink-700 text-white">Host an Experience!</a></Link>
+            <br></br>
+            <Link href="/experiences"><a className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white">Book an Experiences</a></Link>
             <br />
-            <Button onClick={() => router.push("/experiences")}>
-              Book an Experiences
-            </Button>
           </div>
         </div>
       </div>

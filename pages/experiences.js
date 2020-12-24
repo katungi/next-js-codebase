@@ -7,7 +7,7 @@ import axios from "axios";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 
 const getExperiences = async () => {
-  const { data } = await axios.get("http://localhost:3001/api/v1/meetups");
+  const { data } = await axios.get("https://d7db63976189.ngrok.io/api/v1/meetups");
   return data;
 };
 
