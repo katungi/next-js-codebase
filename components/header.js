@@ -1,8 +1,5 @@
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
-import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
 import { pink } from "@material-ui/core/colors";
-import LanguageRoundedIcon from "@material-ui/icons/LanguageRounded";
-import { Avatar, Button } from "@material-ui/core";
 import Link from "next/link";
 import { signin, signout, useSession } from "next-auth/client";
 
@@ -13,7 +10,7 @@ export default function header() {
     <>
       <header className="lg:px-px px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
         <div className="flex-1 flex justify-between items-center">   
-            <Link href="/">
+            <Link href="">
             <a>
             <img
                 className="header__icon_large"
@@ -46,7 +43,7 @@ export default function header() {
             </ul>
           </nav>
           <div className="header__right">
-            <p className="m-3 justify-center">Categories</p>
+            <Link href="/categories"><p className="m-3 justify-center">Categories</p></Link>
           </div>
           {!session && (
             <a
@@ -56,7 +53,7 @@ export default function header() {
                 signin();  
               }}
             >
-              <Button className="">Sign Up</Button>
+             sign up
             </a>
           )}
 
@@ -130,7 +127,7 @@ export default function header() {
           width: 15vw;
           margin-right: 80px;
         }
-        }
+  
       `}</style>
     </>
   );

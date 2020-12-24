@@ -33,18 +33,18 @@ export default function createExperiences() {
         onFinish={onFinish}
       >
         <Form.Item
-          name={["user", "Experience"]}
+          name={["data", "Experience"]}
           label="Experience"
           rules={[{ required: true }]}
         >
           <Input />
         </Form.Item>
-        <Form.Item name={["user", "Description"]} label="Description">
+        <Form.Item name={["data", "Description"]} label="Description">
           <Input.TextArea />
         </Form.Item>
 
         <Form.Item
-          name="select"
+          name={["data","select"]}
           label="Select"
           hasFeedback
           rules={[
@@ -62,7 +62,7 @@ export default function createExperiences() {
 
         <Form.Item label="Dragger">
           <Form.Item
-            name="dragger"
+            name={["data", "dragger"]}
             valuePropName="fileList"
             getValueFromEvent={normFile}
             noStyle
