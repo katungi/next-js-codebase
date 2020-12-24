@@ -33,18 +33,18 @@ export default function createExperiences() {
         onFinish={onFinish}
       >
         <Form.Item
-          name={["data", "Experience"]}
+          name="Experience"
           label="Experience"
           rules={[{ required: true }]}
         >
           <Input />
         </Form.Item>
-        <Form.Item name={["data", "Description"]} label="Description">
+        <Form.Item name="Description" label="Description">
           <Input.TextArea />
         </Form.Item>
 
         <Form.Item
-          name={["data","select"]}
+          name="select"
           label="Select"
           hasFeedback
           rules={[
@@ -60,9 +60,9 @@ export default function createExperiences() {
           </Select>
         </Form.Item>
 
-        <Form.Item label="Dragger">
+        
           <Form.Item
-            name={["data", "dragger"]}
+            name="dragger"
             valuePropName="fileList"
             getValueFromEvent={normFile}
             noStyle
@@ -78,7 +78,7 @@ export default function createExperiences() {
                 Support for a single or bulk upload.
               </p>
             </Upload.Dragger>
-          </Form.Item>
+       
         </Form.Item>
 
         <Form.Item wrapperCol={{ span: 12, offset: 6 }}>

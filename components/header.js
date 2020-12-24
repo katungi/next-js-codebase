@@ -1,7 +1,7 @@
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { pink } from "@material-ui/core/colors";
 import Link from "next/link";
-import { signin, signout, useSession } from "next-auth/client";
+import { signin, signout, useSession} from "next-auth/client";
 
 export default function header() {
   const [session, loading] = useSession();
