@@ -2,8 +2,6 @@ import { useState } from "react";
 import { signup } from "../../Hooks/auth";
 
 const SignupComponent = () => {
-  const url = "https://localhost:8000";
-
   const [values, setValues] = useState({
     name: "",
     email: "",

@@ -1,10 +1,12 @@
 import { QueryClient, useQuery } from "react-query";
 import axios from "axios";
+import {API} from '../config'
 import CategoryCards from "../components/experienceCards/CategoryCards";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
+
 export default function Categories() {
   const getCategories = async () => {
-    const { data } = await axios.get("http:localhost:8000/api/categories");
+    const { data } = await axios.get(`${API}/api/categories`);
     return data;
   };
   const { data, isLoading } = useQuery("categories", getCategories);
