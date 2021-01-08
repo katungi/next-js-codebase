@@ -21,7 +21,7 @@ export default function banner() {
             <Button
               type="primary"
               shape="round"
-              icon={<RocketOutlind />}
+              icon={<RocketOutlined />}
               size="large"
               onClick={router.push("/createExperience")}
             >
