@@ -1,10 +1,9 @@
-import { useRouter } from "next/router";
+import Router from "next/router";
 import { Button } from "antd";
 import { CalendarOutlined, RocketOutlined } from "@ant-design/icons";
 import style from "../styles/banner.module.css";
 
 export default function banner() {
-  const router = useRouter();
   return (
     <>
       <div>
@@ -23,7 +22,7 @@ export default function banner() {
               shape="round"
               icon={<RocketOutlined />}
               size="large"
-              onClick={router.push("/createExperience")}
+              onClick={() => Router.push("/createExperience")}
             >
               Host an Experience
             </Button>
@@ -34,7 +33,7 @@ export default function banner() {
               shape="round"
               icon={<CalendarOutlined />}
               size="large"
-              onClick={router.push("/experiences")}
+              onClick={() => Router.push("/experiences")}
             >
               Book an experience
             </Button>
