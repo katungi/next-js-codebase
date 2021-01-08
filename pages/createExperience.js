@@ -11,7 +11,6 @@ import Axios from 'axios';
 
 export default function createExperiences() {
   const { Option } = Select;
-  const formData = new FormData();
   const formItemLayout = {
     labelCol: { span: 6 },
     wrapperCol: { span: 14 },
@@ -19,22 +18,6 @@ export default function createExperiences() {
 
   const normFile = (e) => {
     console.log("Upload event:", e);
-    if (Array.isArray(e)) {
-      formData.append('file', e);
-      formData.append('upload_preset', 'rhkex9av');
-      const options = {
-        body: formData,
-      }
-      return Axios.post('https://api.cloudinary.com/v1_1/dankatdennis2758/image/upload', options)
-      .then((res)=>{
-        console.log(res);
-      })
-      .catch((err)=>{
-        console.log(err);
-      });
-      return e;
-    }
-    return e && e.fileList;
   };
   const onFinish = (values) => {
     console.log("Received values of form: ", values);

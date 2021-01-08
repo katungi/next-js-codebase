@@ -1,7 +1,7 @@
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { pink } from "@material-ui/core/colors";
 import Link from "next/link";
-import { signin, signout, useSession} from "next-auth/client";
+import { signin, signout, useSession } from "next-auth/client";
 
 export default function header() {
   const [session, loading] = useSession();
@@ -9,16 +9,16 @@ export default function header() {
   return (
     <>
       <header className="lg:px-px px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
-        <div className="flex-1 flex justify-between items-center">   
-            <Link href="">
+        <div className="flex-1 flex justify-between items-center">
+          <Link href="">
             <a>
-            <img
+              <img
                 className="header__icon_large"
                 src="/images/logo.png"
                 alt="HostGuest"
               />
             </a>
-            </Link>
+          </Link>
         </div>
         <label for="menu-toggle" className="cursor-pointer  lg:hidden block">
           <svg viewBox="0 0 100 80" width="40" height="40">
@@ -43,18 +43,22 @@ export default function header() {
             </ul>
           </nav>
           <div className="header__right">
-            <Link href="/categories"><a className="m-3 justify-center">Categories</a></Link>
+            <Link href="/categories">
+              <a className="m-3 justify-center">Categories</a>
+            </Link>
           </div>
           {!session && (
-            <a
-              href="/api/auth/signin"
-              onClick={(e) => {
-                e.preventDefault();
-                signin();  
-              }}
-            >
-             sign up
-            </a>
+            <Link href="/signin">
+              <a
+                href="/"
+                onClick={(e) => {
+                  // e.preventDefault();
+                  // signin();
+                }}
+              >
+                sign up
+              </a>
+            </Link>
           )}
 
           {session && (
@@ -63,7 +67,6 @@ export default function header() {
                 style={{ backgroundImage: `url(${session.user.image})` }}
                 className="avatar"
               ></span>
-
               <a
                 href="/api/auth/signout"
                 className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white"
@@ -79,7 +82,7 @@ export default function header() {
       </header>
       <style jsx>{`
         #menu-toggle:checked + #menu {
-          display:inline-block;
+          display: inline-block;
         }
         .header {
           display: flex;
@@ -116,7 +119,7 @@ export default function header() {
 
         .header__center > input {
           border: none;
-          
+
           outline-width: 0;
         }
 
@@ -127,7 +130,6 @@ export default function header() {
           width: 15vw;
           margin-right: 80px;
         }
-  
       `}</style>
     </>
   );
