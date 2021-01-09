@@ -1,136 +1,92 @@
-import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
-import { pink } from "@material-ui/core/colors";
+import { useState } from "react";
 import Link from "next/link";
-import { signin, signout, useSession } from "next-auth/client";
 
 export default function header() {
-  const [session, loading] = useSession();
+  const [toggle, setToggle] = useState(false);
+
+  function handleClick() {
+    setToggle(!toggle);
+  }
 
   return (
-    <>
-      <header className="lg:px-px px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
-        <div className="flex-1 flex justify-between items-center">
-          <Link href="">
-            <a>
-              <img
-                className="header__icon_large"
-                src="/images/logo.png"
-                alt="HostGuest"
-              />
-            </a>
+    <header class="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+      <div class="flex items-center justify-between px-4 py-3 sm:p-0 bg-white">
+        <div>
+          <Link href="/">
+            <img class="h-8" src="/images/hostguest-logo.png" alt="hostguest" />
           </Link>
         </div>
-        <label for="menu-toggle" className="cursor-pointer  lg:hidden block">
-          <svg viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="20"></rect>
-            <rect y="30" width="100" height="20"></rect>
-            <rect y="60" width="100" height="20"></rect>
-          </svg>
-        </label>
-        <input type="checkbox" className="hidden" id="menu-toggle"></input>
-        <div
-          className="hidden lg:flex lg:items-center lg:w-auto w-full"
-          id="menu"
-        >
-          <nav>
-            <ul className="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-              <li>
-                <div className="header__center">
-                  <input type="text" />
-                  <SearchRoundedIcon style={{ color: pink[300] }} />
-                </div>
-              </li>
-            </ul>
-          </nav>
-          <div className="header__right">
-            <Link href="/categories">
-              <a className="m-3 justify-center">Categories</a>
-            </Link>
-          </div>
-          {!session && (
-            <Link href="/signin">
-              <a
-                href="/"
-                onClick={(e) => {
-                  // e.preventDefault();
-                  // signin();
-                }}
+        <div class="sm:hidden">
+          <button
+            type="button"
+            class="block text-gray-500 hover:text-white"
+            onClick={handleClick}
+          >
+            {toggle == false ? (
+              <svg viewBox="0 0 10 8" width="30">
+                <path
+                  d="M1 1h8M1 4h 8M1 7h8"
+                  stroke="#f53398"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="30"
+                height="20"
+                overflow="visible"
+                stroke="#f53398"
+                stroke-width="5"
+                stroke-linecap="round"
               >
-                sign up
-              </a>
-            </Link>
-          )}
-
-          {session && (
-            <div className="header__right lg:ml-4 flex lg:mb-0 mb-4 cursor-pointer">
-              <span
-                style={{ backgroundImage: `url(${session.user.image})` }}
-                className="avatar"
-              ></span>
-              <a
-                href="/api/auth/signout"
-                className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white"
-                onClick={(e) => {
-                  e.preventDefault();
-                  signout();
-                }}
-              ></a>
-              <span>{session.user.name}</span>
-            </div>
-          )}
+                <line x1="0" y1="0" x2="50" y2="50" />
+                <line x1="50" y1="0" x2="0" y2="50" />
+              </svg>
+            )}
+          </button>
         </div>
-      </header>
-      <style jsx>{`
-        #menu-toggle:checked + #menu {
-          display: inline-block;
-        }
-        .header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: sticky;
-          top: 0;
-          background-color: white;
-          z-index: 100;
-          width: 100%;
-        }
-        .header__icon_large {
-          object-fit: contain;
-          height: 50px;
-          margin-left: 20px;
-          padding: 10px;
-        }
-        .header__icon_small {
-          object-fit: contain;
-          height: 50px;
-          margin-left: 20px;
-          padding: 10px;
-        }
-        .header__center {
-          display: flex;
-          flex: 1;
-          align-items: center;
-          max-width: fit-content;
-          padding: 10px;
-          height: 30px;
-          border: 1px solid lightgrey;
-          border-radius: 999px;
-        }
-
-        .header__center > input {
-          border: none;
-
-          outline-width: 0;
-        }
-
-        .header__right {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 15vw;
-          margin-right: 80px;
-        }
-      `}</style>
-    </>
+      </div>
+      <div
+        className={`${
+          toggle ? "block" : "hidden"
+        } px-2 pt-2 pb-4 sm:flex sm:p-0`}
+      >
+        <a
+          href=""
+          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
+        >
+          Become Host
+        </a>
+        <a
+          href=""
+          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+        >
+          Categories
+        </a>
+        <a
+          href=""
+          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+        >
+          Sign Up
+        </a>
+        <Link href="/signin">
+          <a
+            href=""
+            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+          >
+            Sign In
+          </a>
+        </Link>
+        <a
+          href=""
+          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+        >
+          Daniel Dennis
+        </a>
+      </div>
+    </header>
   );
 }

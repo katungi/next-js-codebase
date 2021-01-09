@@ -1,6 +1,5 @@
 import fetch from 'isomorphic-fetch';
 import cookie from 'js-cookie';
-
 const API = 'http://localhost:8000'
 
 export const signup = user => {
@@ -86,7 +85,6 @@ export const removeLocalStorage = key => {
 export const authenticate = (data, next) => {
     setCookie('token', data.token);
     setLocalStorage('user', data.user);
-    next();
 };
 
 export const isAuth = () => {

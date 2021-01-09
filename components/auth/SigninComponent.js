@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { signin } from "../../Hooks/auth";
 import Toaster from "react-hot-toast";
-import axios from "axios";
 import { useRouter } from 'next/router'
+import { authenticate } from '../../Hooks/auth'
+
 
 const SigninComponent = () => {
   const router = useRouter()
@@ -36,7 +37,9 @@ const SigninComponent = () => {
           message: data.message,
           showForm: false,
         });
+        authenticate(data);
         router.push('/experiences')
+        
       }
     });
   };
