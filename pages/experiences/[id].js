@@ -1,12 +1,30 @@
 import ErrorPage from "next/error";
 import fetch from "node-fetch";
+import axios from "axios";
 import { Button } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
+import { isAuth } from "../../Hooks/auth";
+import { API } from "../../config";
 
 export default function Post({ data }) {
   if (!data) {
     return <ErrorPage statusCode={404}></ErrorPage>;
   }
+
+  function bookEvent() {
+    let id = isAuth()._id;
+    console.log(id);
+    let url = `http://localhost:8000/api/experiences/${data._id}/join`;
+    axios
+      .post(`$`, { id: id })
+      .then((res) => {
+        console.log(`You just Booked experience ID number ${res}`);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16">
@@ -79,19 +97,36 @@ export default function Post({ data }) {
           </h2>
           <hr className="w-16  ml-4 border-gray-300 hidden sm:block" />
           <br></br>
-          <p className="col-start-1 text-sm align-text font-medium text-black sm:mb-1 sm:text-gray-500">{data.description}</p>
+          <p className="col-start-1 text-sm align-text font-medium text-black sm:mb-1 sm:text-gray-500">
+            {data.description}
+          </p>
           <br></br>
-         <div className="ml-4">
-         <Button
-            type="primary"
-            shape="round"
-            icon={<CalendarOutlined />}
-            size="large"
-            style={{ background: "#f53398", borderColor: "white" }}
-          >
-            BOOK
-          </Button>
-         </div>
+          <div className="ml-4">
+            {!isAuth ? (
+              <Link href="/signup">
+                <Button
+                  type="primary"
+                  shape="round"
+                  icon={<CalendarOutlined />}
+                  size="large"
+                  style={{ background: "#f53398", borderColor: "white" }}
+                >
+                  Go Sign In
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                type="primary"
+                shape="round"
+                icon={<CalendarOutlined />}
+                size="large"
+                style={{ background: "#f53398", borderColor: "white" }}
+                onClick={bookEvent}
+              >
+                BOOK
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </>

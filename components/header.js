@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
+import { Avatar } from "antd";
+import { isAuth } from "../Hooks/auth";
 
 export default function header() {
   const [toggle, setToggle] = useState(false);
@@ -66,26 +68,33 @@ export default function header() {
         >
           Categories
         </a>
-        <a
-          href=""
-          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
-        >
-          Sign Up
-        </a>
-        <Link href="/signin">
-          <a
-            href=""
-            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
-          >
-            Sign In
-          </a>
-        </Link>
-        <a
-          href=""
-          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
-        >
-          Daniel Dennis
-        </a>
+
+        {!isAuth() ? (
+          <>
+            <a
+              href=""
+              class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+            >
+              Sign Up
+            </a>
+            <Link href="/signin">
+              <a
+                href=""
+                class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+              >
+                Sign In
+              </a>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href="/">
+              <a class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2">
+                {isAuth().name}
+              </a>
+            </Link>
+          </>
+        )}
       </div>
     </header>
   );
