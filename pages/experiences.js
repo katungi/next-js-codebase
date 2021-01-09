@@ -53,8 +53,8 @@ export default function experiences({ experiences }) {
       <h1 className="text-4xl mx-4 font-extrabold text-pink-600 uppercase">
         Experiences
       </h1>
-      <br />
-      {data?.meetups?.map((experience, id) => (
+      <br/>
+      {data?.experiences?.map((experience, id) => (
         <ExperienceCards experience={experience} key={id} />
       ))}
       <Divider />
