@@ -128,7 +128,7 @@ export const preSignup = user => {
 
 
 export const loginWithGoogle = user => {
-    return fetch(`${API}/google-login`, {
+    return fetch(`${API}/api/google-login`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',

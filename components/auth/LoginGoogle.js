@@ -9,6 +9,7 @@ const LoginGoogle = () => {
         const user = { tokenId };
 
         loginWithGoogle(user).then(data => {
+          if(data !== undefined){
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -20,6 +21,7 @@ const LoginGoogle = () => {
                     }
                 });
             }
+          }
         });
     };
 
@@ -31,6 +33,7 @@ const LoginGoogle = () => {
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 theme="dark"
+                onClick={LoginGoogle}
             />
         </div>
     );

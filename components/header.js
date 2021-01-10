@@ -56,18 +56,22 @@ export default function header() {
           toggle ? "block" : "hidden"
         } px-2 pt-2 pb-4 sm:flex sm:p-0`}
       >
-        <a
-          href=""
-          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
-        >
-          Become Host
-        </a>
-        <a
-          href=""
-          class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
-        >
-          Categories
-        </a>
+        <Link href="/createExperience">
+          <a
+            href=""
+            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
+          >
+            Host an Experience
+          </a>
+        </Link>
+        <Link href="/categories">
+          <a
+            href=""
+            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+          >
+            Categories
+          </a>
+        </Link>
 
         {!isAuth() ? (
           <>
