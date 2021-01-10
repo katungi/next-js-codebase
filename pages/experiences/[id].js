@@ -16,7 +16,7 @@ export default function Post({ data }) {
     console.log(id);
     let url = `http://localhost:8000/api/experiences/${data._id}/join`;
     axios
-      .post(`$`, { id: id })
+      .post(`${url}`, { id: id })
       .then((res) => {
         console.log(`You just Booked experience ID number ${res}`);
       })
