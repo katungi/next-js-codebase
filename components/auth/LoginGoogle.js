@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import GoogleLogin from 'react-google-login';
 import { loginWithGoogle, authenticate, isAuth } from '../../Hooks/auth';
-import { GOOGLE_CLIENT_ID } from '../../config';
+
 
 const LoginGoogle = () => {
     const responseGoogle = response => {
