@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { signup } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
+import Link from 'next/link'
 
 
 const SignupComponent = () => {
