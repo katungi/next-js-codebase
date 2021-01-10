@@ -4,6 +4,7 @@ import Toaster from "react-hot-toast";
 import { useRouter } from "next/router";
 import { authenticate } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
+import Link from 'next/link'
 
 const SigninComponent = () => {
   const router = useRouter();
