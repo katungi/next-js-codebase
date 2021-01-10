@@ -11,17 +11,21 @@ export default function header() {
   }
 
   return (
-    <header class="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
-      <div class="flex items-center justify-between px-4 py-3 sm:p-0 bg-white">
+    <header className="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+      <div className="flex items-center justify-between px-4 py-3 sm:p-0 bg-white">
         <div>
           <Link href="/">
-            <img class="h-8" src="/images/hostguest-logo.png" alt="hostguest" />
+            <img
+              className="h-8"
+              src="/images/hostguest-logo.png"
+              alt="hostguest"
+            />
           </Link>
         </div>
-        <div class="sm:hidden">
+        <div className="sm:hidden">
           <button
             type="button"
-            class="block text-gray-500 hover:text-white"
+            className="block text-gray-500 hover:text-white"
             onClick={handleClick}
           >
             {toggle == false ? (
@@ -29,8 +33,8 @@ export default function header() {
                 <path
                   d="M1 1h8M1 4h 8M1 7h8"
                   stroke="#f53398"
-                  stroke-width="1"
-                  stroke-linecap="round"
+                  strokeWidth="1"
+                  strokeLinecap="round"
                 />
               </svg>
             ) : (
@@ -41,8 +45,8 @@ export default function header() {
                 height="20"
                 overflow="visible"
                 stroke="#f53398"
-                stroke-width="5"
-                stroke-linecap="round"
+                strokeWidth="5"
+                strokeLinecap="round"
               >
                 <line x1="0" y1="0" x2="50" y2="50" />
                 <line x1="50" y1="0" x2="0" y2="50" />
@@ -59,7 +63,7 @@ export default function header() {
         <Link href="/createExperience">
           <a
             href=""
-            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
+            className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
           >
             Host an Experience
           </a>
@@ -67,7 +71,7 @@ export default function header() {
         <Link href="/categories">
           <a
             href=""
-            class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+            className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
           >
             Categories
           </a>
@@ -78,7 +82,7 @@ export default function header() {
             <Link href="/signup">
               <a
                 href=""
-                class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+                className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
               >
                 Sign Up
               </a>
@@ -86,7 +90,7 @@ export default function header() {
             <Link href="/signin">
               <a
                 href=""
-                class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+                className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
               >
                 Sign In
               </a>
@@ -95,7 +99,7 @@ export default function header() {
         ) : (
           <>
             <Link href="/">
-              <a class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2">
+              <a className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2">
                 {isAuth().name}
               </a>
             </Link>
