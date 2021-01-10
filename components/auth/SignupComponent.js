@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { signup } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
 
