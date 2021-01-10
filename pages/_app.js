@@ -9,7 +9,6 @@ import { ReactQueryDevtools } from "react-query/devtools";
 
 const queryClient = new QueryClient();
 
-
 export default function MyApp({ Component, pageProps }) {
   const { session } = pageProps;
 

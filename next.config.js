@@ -1,5 +1,5 @@
 module.exports  = {
-    publicRuntimeConfig: {
+    env: {
         APP_NAME: 'HostGuest',
         API_DEVELOPMENT: "http://localhost:8000/",
         API_PRODUCTION: "https://hostguest-backend.herokuapp.com/",

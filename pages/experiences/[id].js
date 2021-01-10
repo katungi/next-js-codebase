@@ -4,7 +4,7 @@ import axios from "axios";
 import { Button } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 import { isAuth } from "../../Hooks/auth";
-import { API } from "../../config";
+// import { API } from "../../config";
 
 export default function Post({ data }) {
   if (!data) {

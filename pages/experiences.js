@@ -4,11 +4,11 @@ import ExperienceCards from "../components/experienceCards/ExperienceCards";
 import Footer from "../components/footer";
 import { Divider } from "@material-ui/core";
 import axios from "axios";
-import { API } from "../config";
+// import { API } from "../config";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 
 const getExperiences = async () => {
-  const { data } = await axios.get(`${API}/api/experiences`);
+  const { data } = await axios.get(`${process.env.API}/api/experiences`);
   return data;
 };
 

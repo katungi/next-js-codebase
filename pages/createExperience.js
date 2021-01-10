@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Form, Select, Button, Upload, Input } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
-
 const { Option } = Select;
 export default function createExperiences() {
+  const [form] = Form.useForm();
   const [categories, setCategories] = useState([]);
 
-  const { Option } = Select;
   const formItemLayout = {
     labelCol: { span: 6 },
     wrapperCol: { span: 14 },
@@ -28,6 +27,7 @@ export default function createExperiences() {
         return response.json();
       })
       .then((data) => {
+        // form.setFieldsValue(data);
         initialCategories = data.map((category) => {
           return category;
         });
@@ -42,7 +42,12 @@ export default function createExperiences() {
 
   return (
     <>
-      <Form name="validate_other" {...formItemLayout} onFinish={onFinish}>
+      <Form
+        form={form}
+        name="validate_other"
+        {...formItemLayout}
+        onFinish={onFinish}
+      >
         <Form.Item
           name="Experience"
           label="Experience"
@@ -55,9 +60,8 @@ export default function createExperiences() {
         </Form.Item>
 
         <Form.Item
-          name="select"
-          label="Select"
-          hasFeedback
+          name="category"
+          label="Category"
           rules={[
             {
               required: true,
@@ -69,9 +73,11 @@ export default function createExperiences() {
             placeholder="Please select The Category for Experience"
             onChange={handleChange}
           >
-            {categories.map((category, index) => {
-              console.log(`${category.name}, ${index}`);
-              <Option key={category._id}>{category.name}</Option>;
+            {categories?.map(({ _id, name }) => {
+              console.log(`${name}, ${_id}`);
+              <Option key={_id} value={name}>
+                {name}
+              </Option>;
             })}
           </Select>
         </Form.Item>

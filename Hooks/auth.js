@@ -1,9 +1,9 @@
 import fetch from 'isomorphic-fetch';
 import cookie from 'js-cookie';
-import {API} from '../config'
+// import {API} from '../config'
 
 export const signup = user => {
-    return fetch(`${API}/api/signup`, {
+    return fetch(`${process.env.API}/api/signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -18,7 +18,7 @@ export const signup = user => {
 };
 
 export const signin = user => {
-    return fetch(`${API}/api/signin`, {
+    return fetch(`${process.env.API}/api/signin`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -38,7 +38,7 @@ export const signout = next => {
     removeLocalStorage('user');
     next();
 
-    return fetch(`${API}/signout`, {
+    return fetch(`${process.env.API}/signout`, {
         method: 'GET'
     })
         .then(response => {
@@ -112,7 +112,7 @@ export const updateUser = (user, next) => {
 };
 
 export const preSignup = user => {
-    return fetch(`${API}/pre-signup`, {
+    return fetch(`${process.env.API}/pre-signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -128,7 +128,7 @@ export const preSignup = user => {
 
 
 export const loginWithGoogle = user => {
-    return fetch(`${API}/api/google-login`, {
+    return fetch(`/api/google-login`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -137,7 +137,9 @@ export const loginWithGoogle = user => {
         body: JSON.stringify(user)
     })
         .then(response => {
-            return response.json();
+            if (response.ok){
+                return response.json();
+            }
         })
         .catch(err => console.log(err));
 };
