@@ -71,12 +71,14 @@ export default function header() {
 
         {!isAuth() ? (
           <>
-            <a
-              href=""
-              class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
-            >
-              Sign Up
-            </a>
+            <Link href="/signup">
+              <a
+                href=""
+                class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2"
+              >
+                Sign Up
+              </a>
+            </Link>
             <Link href="/signin">
               <a
                 href=""

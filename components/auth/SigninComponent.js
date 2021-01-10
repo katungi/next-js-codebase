@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { signin } from "../../Hooks/auth";
 import Toaster from "react-hot-toast";
-import { useRouter } from 'next/router'
-import { authenticate } from '../../Hooks/auth'
+import { useRouter } from "next/router";
+import { authenticate } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
 
-
 const SigninComponent = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const [values, setValues] = useState({
     email: "",
@@ -33,14 +32,13 @@ const SigninComponent = () => {
           ...values,
           email: "",
           password: "",
-          error: "",  
+          error: "",
           loading: false,
           message: data.message,
           showForm: false,
         });
         authenticate(data);
-        router.push('/experiences')
-        
+        router.push("/experiences");
       }
     });
   };
@@ -94,7 +92,7 @@ const SigninComponent = () => {
                         </h6>
                       </div>
                       <div className="btn-wrapper text-center">
-                        <LoginGoogle/>
+                        <LoginGoogle />
                       </div>
                       <hr className="mt-6 border-b-1 border-gray-400" />
                     </div>
@@ -160,9 +158,11 @@ const SigninComponent = () => {
                       </a>
                     </div>
                     <div className="w-1/2 text-right">
-                      <a href="#pablo" className="text-gray-300">
-                        <small>Create new account</small>
-                      </a>
+                      <Link href="/signup">
+                        <a href="#pablo" className="text-gray-300">
+                          <small>Create new account</small>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
