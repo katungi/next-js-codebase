@@ -1,6 +1,3 @@
-import {useEffect} from 'react';
-import Cards from '../components/experienceCards/ExperienceCards'
-import axios from 'axios';
 import Categories from '../components/categories'
 import Footer from '../components/footer'
 import { Divider } from '@material-ui/core';

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Avatar } from "antd";
 import { isAuth } from "../Hooks/auth";
 
 export default function header() {
