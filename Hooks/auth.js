@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import cookie from 'js-cookie';
-const API = 'http://localhost:8000'
+import {API} from '../config'
 
 export const signup = user => {
     return fetch(`${API}/api/signup`, {

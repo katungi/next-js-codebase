@@ -2,14 +2,6 @@ import router from "next/router";
 import Link from "next/link";
 
 export default function Cards({ experience }) {
-  // function handleClick(id) {
-  //   router.push({
-  //     pathname: "/experiences/[pid]",
-  //     query: { pid: id},
-  //   });
-
-  //   console.log(id);
-  // }
 
   return (
     <div className="container max-w-full">
