@@ -3,7 +3,7 @@ import cookie from 'js-cookie';
 // import {API} from '../config'
 
 export const signup = user => {
-    return fetch(`${process.env.API}/api/signup`, {
+    return fetch(`https://hostguest-backend.herokuapp.com/api/signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -18,7 +18,7 @@ export const signup = user => {
 };
 
 export const signin = user => {
-    return fetch(`${process.env.API}/api/signin`, {
+    return fetch(`https://hostguest-backend.herokuapp.com/api/signin`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -38,7 +38,7 @@ export const signout = next => {
     removeLocalStorage('user');
     next();
 
-    return fetch(`${process.env.API}/signout`, {
+    return fetch(`https://hostguest-backend.herokuapp.com/signout`, {
         method: 'GET'
     })
         .then(response => {
@@ -112,7 +112,7 @@ export const updateUser = (user, next) => {
 };
 
 export const preSignup = user => {
-    return fetch(`${process.env.API}/pre-signup`, {
+    return fetch(`https://hostguest-backend.herokuapp.com/pre-signup`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',

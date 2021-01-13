@@ -8,7 +8,7 @@ import axios from "axios";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 
 const getExperiences = async () => {
-  const { data } = await axios.get(`${process.env.API}/api/experiences`);
+  const { data } = await axios.get(`https://hostguest-backend.herokuapp.com/api/experiences`);
   return data;
 };
 
