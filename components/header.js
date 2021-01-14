@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { isAuth } from "../Hooks/auth";
+import { Button } from "antd";
+import { RocketOutlined } from "@ant-design/icons";
 
 export default function header() {
   const [toggle, setToggle] = useState(false);
@@ -59,13 +61,15 @@ export default function header() {
           toggle ? "block" : "hidden"
         } px-2 pt-2 pb-4 sm:flex sm:p-0`}
       >
-        <Link href="/createExperience">
-          <a
-            href=""
-            className="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white"
+        <Link href="/hosts">
+          <Button
+            shape="round"
+            icon={<RocketOutlined />}
+            size="large"
+            className="bg-pink-600 text-white hover:text-pink-500 hover:bg-white border-white"
           >
             Host an Experience
-          </a>
+          </Button>
         </Link>
         <Link href="/categories">
           <a
