@@ -25,7 +25,7 @@ export default function hosts() {
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md shadow">
-                      <Link href="/createExperiences">
+                      <Link href="/createExperience">
                         <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-pink-600 hover:bg-pink-700 hover:text-white md:py-4 md:text-lg md:px-10">
                           Create an Experience
                         </a>
@@ -120,7 +120,7 @@ export default function hosts() {
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
                   <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-                   <p>🛩 </p>
+                    <p>🛩 </p>
                   </div>
                   <h3 className="text-3xl font-semibold">
                     We make Sh** Work however you want it
@@ -139,8 +139,8 @@ export default function hosts() {
                         </div>
                         <div>
                           <h4 className="text-gray-600">
-                            Carefully thought out Pay out model - We pay you accordingly and
-                            instantly
+                            Carefully thought out Pay out model - We pay you
+                            accordingly and instantly
                           </h4>
                         </div>
                       </div>
@@ -171,6 +171,24 @@ export default function hosts() {
                           <h4 className="text-gray-600">
                             Unlimited experiences -- You can make as many
                             experiences as you want, we will still pay you
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                            <i className="far fa-paper-plane"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="text-gray-600">
+                            <Link href="/createExperience">
+                              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-pink-600 hover:bg-pink-700 hover:text-white md:py-4 md:text-lg md:px-10">
+                                Click Here To Go back up and become a host
+                              </a>
+                            </Link>
                           </h4>
                         </div>
                       </div>
