@@ -26,18 +26,16 @@ export default function banner() {
                     click away!
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                    <div className="rounded-md shadow">
-                      <Link href="/experiences">
-                        <Button
-                          shape="round"
-                          icon={<CalendarOutlined />}
-                          size="large"
-                          className="bg-pink-600 text-white hover:text-pink-500 hover:bg-white border-white"
-                        >
-                          Check out Experiences
-                        </Button>
-                      </Link>
-                    </div>
+                    <Link href="/experiences">
+                      <Button
+                        shape="round"
+                        icon={<CalendarOutlined />}
+                        size="large"
+                        className="bg-pink-600 text-white hover:text-pink-500 hover:bg-white border-white"
+                      >
+                        Check out Experiences
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </main>
