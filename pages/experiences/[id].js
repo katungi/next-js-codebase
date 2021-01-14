@@ -15,7 +15,7 @@ export default function Post({ data }) {
     let id = isAuth()._id;
     let token = isAuth().token;
     console.log(id);
-    let url = `http://localhost:8000/api/experiences/${data._id}/join`;
+    let url = `https://hostguest-backend.herokuapp.com/experiences/${data._id}/join`;
     axios
       .post(
         `${url}`,
@@ -25,7 +25,7 @@ export default function Post({ data }) {
             Authorization: `Bearer ${token}`,
           },
         }
-      )
+    )
       .then((res) => {
         console.log(`You just Booked experience ID number ${res}`);
       })
