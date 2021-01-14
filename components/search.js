@@ -5,7 +5,7 @@ import { DateRangePicker } from "react-date-range";
 import PeopleIcon from "@material-ui/icons/People";
 import { Button } from "@material-ui/core";
 import { useRouter } from "next/router";
-import styles from '../styles/search.module.css'
+import styles from "../styles/search.module.css";
 
 export default function search() {
   const router = useRouter();

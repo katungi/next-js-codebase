@@ -2,7 +2,6 @@ import router from "next/router";
 import Link from "next/link";
 
 export default function Cards({ experience }) {
-
   return (
     <div className="container max-w-full">
       <div className="block">
@@ -35,14 +34,16 @@ export default function Cards({ experience }) {
                 </div>
                 <div className="flex space-x-3 mb-4 text-sm font-semibold">
                   <div className="flex-auto flex space-x-3">
-                    <Link href='/experiences/[id]' as={`/experiences/${experience._id}`} prefetch>
-                    <button
-                      className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white"
+                    <Link
+                      href="/experiences/[id]"
+                      as={`/experiences/${experience._id}`}
+                      prefetch
                     >
-                      check it Out
-                    </button>
+                      <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white">
+                        check it Out
+                      </button>
                     </Link>
-                   
+
                     <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-50 text-pink-700">
                       Add to Favorites
                     </button>

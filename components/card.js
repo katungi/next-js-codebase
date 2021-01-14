@@ -1,4 +1,4 @@
-import style from '../styles/card.module.css'
+import style from "../styles/card.module.css";
 
 export default function Cards({ src, title, description, price }) {
   return (

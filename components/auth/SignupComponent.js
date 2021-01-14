@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Router from 'next/router'
-import { signup,isAuth } from "../../Hooks/auth";
+import Router from "next/router";
+import { signup, isAuth } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
 import Link from "next/link";
 
@@ -95,7 +95,6 @@ const SignupComponent = () => {
                             onChange={handleChange("name")}
                             className="animate-custom px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Enter thy name"
-                          
                           />
                         </div>
                         <div className="relative w-full mb-3">
@@ -111,7 +110,6 @@ const SignupComponent = () => {
                             onChange={handleChange("email")}
                             className="animate-custom px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Email"
-                    
                           />
                         </div>
                         <div className="relative w-full mb-3">
@@ -127,7 +125,6 @@ const SignupComponent = () => {
                             onChange={handleChange("password")}
                             className="animate-custom px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Password"
-                      
                           />
                         </div>
                         <div></div>
@@ -169,8 +166,8 @@ const SignupComponent = () => {
         </main>
         <style jsx>{`
             .main{
-            background-image: url('/public/images/banner.jpg'); 
-            background-size: 100%; 
+            background-image: url('/public/images/banner.jpg');
+            background-size: 100%;
             background-repeat: no-repeat;"
             }
 

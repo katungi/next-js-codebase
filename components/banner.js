@@ -17,7 +17,7 @@ export default function banner() {
           </h5>
           {/* <Link href="/createExperience"><a className="w-1/2 flex items-center justify-center rounded-lg bg-pink-700 text-white">Host an Experience!</a></Link> */}
           <Button
-            style={{ background: "#f53398", borderColor: "white"  }}
+            style={{ background: "#f53398", borderColor: "white" }}
             shape="round"
             icon={<RocketOutlined />}
             size="large"

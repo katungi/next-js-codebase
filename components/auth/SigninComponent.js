@@ -4,7 +4,8 @@ import Toaster from "react-hot-toast";
 import { useRouter } from "next/router";
 import { authenticate } from "../../Hooks/auth";
 import LoginGoogle from "./LoginGoogle";
-import Link from 'next/link'
+import Link from "next/link";
+import { message } from "antd";
 
 const SigninComponent = () => {
   const router = useRouter();
@@ -47,31 +48,8 @@ const SigninComponent = () => {
     setValues({ ...values, error: false, [name]: e.target.value });
   };
   const showLoading = () => (loading ? <div>Loading</div> : "");
-  const showError = () =>
-    error
-      ? toast.error(
-          { error },
-          {
-            style: {
-              borderRadius: "10px",
-            },
-          }
-        )
-      : "";
-  const showMessage = () =>
-    message
-      ? toast(
-          { message },
-          {
-            icon: "👏",
-            style: {
-              borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
-            },
-          }
-        )
-      : "";
+  const showError = () => (error ? "" : "");
+  const showMessage = () => (message ? "" : "");
 
   const signupForm = () => {
     return (
@@ -132,15 +110,6 @@ const SigninComponent = () => {
                             placeholder="Password"
                           />
                         </div>
-                        <div>
-                          <label className="animate-custom inline-flex items-center cursor-pointer">
-                            <input
-                              id="customCheckLogin"
-                              type="checkbox"
-                              className="animate-custom form-checkbox text-gray-800 ml-1 w-5 h-5"
-                            />
-                          </label>
-                        </div>
                         <div className="text-center mt-6">
                           <button
                             className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
@@ -173,8 +142,8 @@ const SigninComponent = () => {
         </main>
         <style jsx>{`
             .main{
-            background-image: url('/public/images/banner.jpg'); 
-            background-size: 100%; 
+            background-image: url('/public/images/banner.jpg');
+            background-size: 100%;
             background-repeat: no-repeat;"
             }
 

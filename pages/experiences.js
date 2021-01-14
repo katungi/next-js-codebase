@@ -8,7 +8,9 @@ import axios from "axios";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 
 const getExperiences = async () => {
-  const { data } = await axios.get(`https://hostguest-backend.herokuapp.com/api/experiences`);
+  const { data } = await axios.get(
+    `https://hostguest-backend.herokuapp.com/api/experiences`
+  );
   return data;
 };
 
@@ -53,7 +55,7 @@ export default function experiences({ experiences }) {
       <h1 className="text-4xl mx-4 font-extrabold text-pink-600 uppercase">
         Experiences
       </h1>
-      <br/>
+      <br />
       {data?.experiences?.map((experience, id) => (
         <ExperienceCards experience={experience} key={id} />
       ))}

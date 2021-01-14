@@ -12,11 +12,7 @@ const UserProvier = ({ children }) => {
       });
   }, []);
 
-  return(
-      <context.Provider value={user}>
-          {children}
-      </context.Provider>
-  );
+  return <context.Provider value={user}>{children}</context.Provider>;
 };
 
 UserProvier.context = context;

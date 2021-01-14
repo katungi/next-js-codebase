@@ -3,9 +3,9 @@ import SigninComponent from "../components/auth/SigninComponent";
 
 const Signin = ({ children }) => {
   return (
-      <div>
-        <SigninComponent />
-      </div>
+    <div>
+      <SigninComponent />
+    </div>
   );
 };
 

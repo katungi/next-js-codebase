@@ -1,12 +1,12 @@
-import { useSession } from 'next-auth/client';
-import Layout from '../components/layout';
+import { useSession } from "next-auth/client";
+import Layout from "../components/layout";
 
 const Profile = () => {
   const [session, loading] = useSession();
 
   if (loading) return <div>loading...</div>;
   if (!session) return <div>no session</div>;
- 
+
   return (
     <Layout>
       {session && (
