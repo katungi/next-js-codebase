@@ -4,7 +4,6 @@ import axios from "axios";
 import { Button } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 import { isAuth } from "../../Hooks/auth";
-// import { API } from "../../config";
 
 export default function Post({ data }) {
   if (!data) {
@@ -15,7 +14,7 @@ export default function Post({ data }) {
     let id = isAuth()._id;
     let token = isAuth().token;
     console.log(id);
-    let url = `https://hostguest-backend.herokuapp.com/experiences/${data._id}/join`;
+    let url = `https://hostguest-backend.herokuapp.com/api/experiences/${data._id}/join`;
     axios
       .post(
         `${url}`,
@@ -25,7 +24,7 @@ export default function Post({ data }) {
             Authorization: `Bearer ${token}`,
           },
         }
-    )
+      )
       .then((res) => {
         console.log(`You just Booked experience ID number ${res}`);
       })
@@ -146,7 +145,9 @@ export async function getServerSideProps({ params, res }) {
   try {
     const { id } = params;
 
-    const result = await fetch(`http://localhost:8000/api/experiences/${id}`);
+    const result = await fetch(
+      `https://hostguest-backend.herokuapp.com/api/experiences/${id}`
+    );
 
     const data = await result.json();
     return {
