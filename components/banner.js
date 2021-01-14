@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
 
@@ -43,12 +43,10 @@ export default function banner() {
             </div>
           </div>
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <Image
+            <img
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
               src="https://images.pexels.com/photos/1360255/pexels-photo-1360255.jpeg?cs=srgb&dl=pexels-thunyarat-klaiklang-1360255.jpg&fm=jpg"
-              alt="Picture of an experience"
-              width={500}
-              height={500}
+              alt=""
             />
           </div>
         </div>
