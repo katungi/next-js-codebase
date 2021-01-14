@@ -13,10 +13,19 @@ export default function Post({ data }) {
 
   function bookEvent() {
     let id = isAuth()._id;
+    let token = isAuth().token;
     console.log(id);
     let url = `http://localhost:8000/api/experiences/${data._id}/join`;
     axios
-      .post(`${url}`, { id: id })
+      .post(
+        `${url}`,
+        { id: id },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then((res) => {
         console.log(`You just Booked experience ID number ${res}`);
       })

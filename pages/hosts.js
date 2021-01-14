@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Footer from "../components/footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export default function hosts() {
   return (
