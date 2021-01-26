@@ -52,7 +52,7 @@ export const setCookie = (key, value) => {
     cookie.set(key, value, {
       expires: 1,
     });
-  }api/google-login
+  }
 };
 
 export const removeCookie = (key) => {
@@ -125,20 +125,19 @@ export const preSignup = (user) => {
     .catch((err) => console.log(err));
 };
 
-export const loginWithGoogle = async (user) => {
-  try {
-    const response = await fetch(`https://hostguest-backend.herokuapp.com/api/auth/google/redirect`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    if (response.ok) {
-      return response.json();
-    }
-  } catch (err) {
-    return console.log(err);
-  }
+export const loginWithGoogle = (user) => {
+  return fetch(`https://hostguest-backend.herokuapp.com/auth/google/redirect`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .catch((err) => console.log(err));
 };
