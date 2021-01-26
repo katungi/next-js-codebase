@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 import Router from "next/router";
 import GoogleLogin from "react-google-login";
 import { loginWithGoogle, authenticate, isAuth } from "../../Hooks/auth";
@@ -25,21 +25,15 @@ const LoginGoogle = () => {
     });
   };
 
-  useEffect(()=>{
-      console.log(`this is the ID ${process.env.GOOGLE_ID}`);
-  })
-
   return (
-
     <div className="pb-3">
       <GoogleLogin
-        clientId={`${process.env.GOOGLE_ID}`}
+        clientId={`${process.env.NEXT_PUBLIC_GOOGLE_ID}`}
         buttonText="Login with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
         theme="dark"
         onClick={LoginGoogle}
-        redirectUri="https://hostguest-backend.herokuapp.com/api/auth/google/redirect"
       />
     </div>
   );

@@ -55,9 +55,6 @@ const SigninComponent = () => {
     return (
       <>
         <main>
-          <div>
-            <Toaster />
-          </div>
           <section className="absolute w-full h-full">
             <div className="absolute top-0 w-full h-full"></div>
             <div className="container mx-auto px-4 h-full">

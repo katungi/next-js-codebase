@@ -126,8 +126,8 @@ export const preSignup = (user) => {
 };
 
 export const loginWithGoogle = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/auth/google/redirect`, {
-    method: "GET",
+  return fetch(`https://hostguest-backend.herokuapp.com/api/google-login`, {
+    method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
