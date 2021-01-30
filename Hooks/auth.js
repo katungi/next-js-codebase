@@ -1,3 +1,4 @@
+import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 import fetch from "isomorphic-fetch";
 import cookie from "js-cookie";
 // import {API} from '../config'
@@ -126,18 +127,19 @@ export const preSignup = (user) => {
 };
 
 export const loginWithGoogle = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/api/google-login`, {
+  return fetch("https://hostguest-backend.herokuapp.com/api/google-login", {
     method: "POST",
+    body: JSON.stringify(user),
     headers: {
-      Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(user),
   })
     .then((response) => {
       if (response.ok) {
         return response.json();
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log(err);
+    });
 };

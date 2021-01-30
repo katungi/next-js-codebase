@@ -32,8 +32,9 @@ const LoginGoogle = () => {
         buttonText="Login with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
-        theme="dark"
+        theme="light"
         onClick={LoginGoogle}
+        cookiePolicy={"single_host_origin"}
       />
     </div>
   );
