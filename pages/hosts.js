@@ -11,9 +11,16 @@ export default function hosts() {
               <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span className="block xl:inline">
+                      Want to be your own boss? Start Today.
+                    </span>
+                    <br></br>
+                    <br></br>
+                  </h1>
+                  <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                     <span className="block xl:inline">Make </span>
                     <span className="block text-pink-600 xl:inline">
-                      KSH 100,000{" "}
+                      Ksh.105,000{" "}
                     </span>
                     <span className="block xl:inline">Doing What you love</span>
                   </h1>
@@ -121,11 +128,10 @@ export default function hosts() {
                     <p>🛩 </p>
                   </div>
                   <h3 className="text-3xl font-semibold">
-                    We make Sh** Work however you want it
+                    How does our sh** work?
                   </h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                    We make hosting an experience as easy as possible. Here are
-                    reasons you should host one
+                    Step 1. Apply to host and get approved.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -137,8 +143,8 @@ export default function hosts() {
                         </div>
                         <div>
                           <h4 className="text-gray-600">
-                            Carefully thought out Pay out model - We pay you
-                            accordingly and instantly
+                            Step 2. Design and stage your experience. You can
+                            host as many experiences as you'd like
                           </h4>
                         </div>
                       </div>
@@ -167,8 +173,7 @@ export default function hosts() {
                         </div>
                         <div>
                           <h4 className="text-gray-600">
-                            Unlimited experiences -- You can make as many
-                            experiences as you want, we will still pay you
+                            Step 3. Accept bookings and earn money.
                           </h4>
                         </div>
                       </div>
@@ -182,11 +187,7 @@ export default function hosts() {
                         </div>
                         <div>
                           <h4 className="text-gray-600">
-                            <Link href="/createExperience">
-                              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-pink-600 hover:bg-pink-700 hover:text-white md:py-4 md:text-lg md:px-10">
-                                Click Here To Go back up and become a host
-                              </a>
-                            </Link>
+                            Step 4. Cash out with Mpesa.
                           </h4>
                         </div>
                       </div>
