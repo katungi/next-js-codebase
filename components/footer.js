@@ -5,8 +5,7 @@ export default function Footer() {
     <footer>
       <div id="content">
         <div>
-          <Divider />
-          <footer className="bg-gray-50 text-gray-600 px-6 lg:px-8 py-12">
+          <footer className="content-center bg-gray-50 text-gray-600 px-6 lg:px-8">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-16 lg:mt-20 border-t-2 border-gray-200 pt-8 ">
               <div className="text-sm space-y-4 md:space-y-1 text-center md:text-left">
                 <p>
