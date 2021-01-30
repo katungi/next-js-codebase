@@ -1,7 +1,5 @@
 import fetch from "isomorphic-fetch";
 import cookie from "js-cookie";
-import axios from "axios";
-// import {API} from '../config'
 
 export const signup = (user) => {
   return fetch(`https://hostguest-backend.herokuapp.com/api/signup`, {

@@ -1,19 +1,36 @@
+import { useState } from "react";
 import ErrorPage from "next/error";
 import fetch from "node-fetch";
 import axios from "axios";
-import { Button } from "antd";
+import { Button, Modal, Result } from "antd";
 import { CalendarOutlined } from "@ant-design/icons";
+import cookie from "js-cookie";
 import { isAuth } from "../../Hooks/auth";
+import Footer from "../../components/footer";
 
 export default function Post({ data }) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   if (!data) {
     return <ErrorPage statusCode={404}></ErrorPage>;
   }
 
   function bookEvent() {
     let id = isAuth()._id;
-    let token = isAuth().token;
-    console.log(id);
+    let token = cookie.get("token");
+    console.log(token);
     let url = `https://hostguest-backend.herokuapp.com/api/experiences/${data._id}/join`;
     axios
       .post(
@@ -21,12 +38,40 @@ export default function Post({ data }) {
         { id: id },
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: "Bearer " + `${token}`,
           },
         }
       )
       .then((res) => {
-        console.log(`You just Booked experience ID number ${res}`);
+        showModal();
+        let id = res.id;
+        console.log(`You just Booked experience ID number ${res.id}`);
+        return (
+          <Modal
+            title="Basic Modal"
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <Result
+              status="success"
+              title={`You just Booked experience`}
+              subTitle="Experience number: 2017182818828182881 We are sending you an email in a few"
+              extra={[
+                <Button
+                  type="primary"
+                  shape="round"
+                  size="large"
+                  style={{ background: "#f53398", borderColor: "white" }}
+                  onClick={bookEvent}
+                >
+                  Book some more
+                </Button>,
+              ]}
+            />
+            ,
+          </Modal>
+        );
       })
       .catch((err) => {
         console.log(err);
@@ -137,6 +182,7 @@ export default function Post({ data }) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
