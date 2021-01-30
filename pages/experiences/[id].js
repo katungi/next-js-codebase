@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ErrorPage from "next/error";
+import Router from "next/router"
 import fetch from "node-fetch";
 import axios from "axios";
 import { Button, Modal, Result } from "antd";
@@ -44,6 +45,7 @@ export default function Post({ data }) {
       )
       .then((res) => {
         showModal();
+        Router.push("/experiences");
         let id = res.id;
         console.log(`You just Booked experience ID number ${res.id}`);
         return (
@@ -82,10 +84,10 @@ export default function Post({ data }) {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-8 sm:py-12 sm:gap-x-8 md:py-16">
         <div className="relative z-10 col-start-1 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
-          <p className="text-sm font-medium text-white sm:mb-1 sm:text-gray-500">
+          <p className="text-xl font-medium text-white sm:mb-1 sm:text-gray-500">
             {data.shortInfo}
           </p>
-          <h2 className="text-xl font-semibold text-white sm:text-2xl sm:leading-7 sm:text-black md:text-3xl">
+          <h2 className="text-4xl font-semibold text-white sm:text-2xl sm:leading-7 sm:text-black md:text-3xl">
             {data.title}
           </h2>
         </div>
@@ -117,6 +119,18 @@ export default function Post({ data }) {
               className="w-6 h-6 rounded-full mr-2 bg-gray-100"
             ></img>
             Hosted by {data.experienceCreator.name}
+          </p>
+          <p className="flex items-center text-black text-sm font-medium">
+            Happening on{" "}
+            <span className="flex items-center text-pink-600 text-sm">
+              {"    "}
+              {data.startDate}
+            </span>
+            at{"    "}
+            <span className="flex items-center text-pink-600 text-sm">
+              {"    "}
+              {data.timeFrom}
+            </span>
           </p>
         </div>
         <div className="col-start-1 row-start-1 flex sm:col-start-2 sm:row-span-3">
@@ -150,7 +164,7 @@ export default function Post({ data }) {
           </h2>
           <hr className="w-16  ml-4 border-gray-300 hidden sm:block" />
           <br></br>
-          <p className="col-start-1 text-sm align-text font-medium text-black sm:mb-1 sm:text-gray-500">
+          <p className="col-start-1 content-center  sm:mb-1 sm:text-gray-500 text-base font-semibold text-gray-700">
             {data.description}
           </p>
           <br></br>

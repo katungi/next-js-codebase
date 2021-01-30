@@ -17,7 +17,7 @@ export default function header() {
         <div>
           <Link href="/">
             <img
-              className="h-8"
+              className="h-16"
               src="/images/hostguest-logo.png"
               alt="hostguest"
             />
