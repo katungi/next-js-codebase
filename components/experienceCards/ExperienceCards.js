@@ -27,7 +27,7 @@ export default function Cards({ experience }) {
                       {experience.title}
                     </h1>
                     <div className="text-4xl leading-7 font-bold text-pink-600">
-                      KSH {experience.joinedPeopleCount}00
+                      {experience.price}
                     </div>
                     <div className="text-sm font-medium text-gray-400 ml-3">
                       Available
