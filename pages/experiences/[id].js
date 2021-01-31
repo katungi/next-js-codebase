@@ -164,7 +164,7 @@ export default function Post({ data }) {
           </h2>
           <hr className="w-16  ml-4 border-gray-300 hidden sm:block" />
           <br></br>
-          <p className="col-start-1 content-center  sm:mb-1 sm:text-gray-500 text-base font-semibold text-gray-700">
+          <p className="col-start-1 content-center px-4 py-5 justify-center sm:mb-1 sm:text-gray-500 text-base font-semibold text-gray-700">
             {data.description}
           </p>
           <br></br>
