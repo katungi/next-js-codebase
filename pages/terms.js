@@ -2,22 +2,25 @@ export default function Terms() {
   return (
     <div>
       <p>
-        TERMS OF USE PLEASE READ THESE TERMS OF USE CAREFULLY. BY REGISTERING
-        FOR AN ACCOUNT OR BY ACCESSING OR USING THE SERVICES, YOU AGREE TO BE
-        BOUND BY THESE TERMS OF USE AND ALL TERMS INCORPORATED BY REFERENCE. IF
-        YOU DO NOT AGREE TO ALL OF THESE TERMS, DO NOT ACCESS OR USE THE
-        SERVICES. These Terms of Use (“Terms”) apply to your access to and use
-        of the website, or any other online or mobile product or service
-        (collectively, the “Services”) of Hostguest limited (“Hostguest,” “we”
-        or “us”). If you are using the Services on behalf of any entity, you
-        represent and warrant that you are authorized to accept these Terms on
-        such entity’s behalf and that such entity will be responsible for your
-        violation of these Terms. Failure to use our Services in accordance with
-        these Terms may result in, among other things, termination or suspension
-        of your rights to use the Services and may subject you to legal action
-        by Hostguest and/or severe civil and/or criminal penalties. We reserve
-        the right to make changes or modifications to these Terms, or any policy
-        or guideline of our Services, at any time and in our sole discretion. If
+        <h2>TERMS OF USE </h2>
+        <h4>
+          PLEASE READ THESE TERMS OF USE CAREFULLY. BY REGISTERING FOR AN
+          ACCOUNT OR BY ACCESSING OR USING THE SERVICES, YOU AGREE TO BE BOUND
+          BY THESE TERMS OF USE AND ALL TERMS INCORPORATED BY REFERENCE. IF YOU
+          DO NOT AGREE TO ALL OF THESE TERMS, DO NOT ACCESS OR USE THE SERVICES.{" "}
+        </h4>
+        These Terms of Use (“Terms”) apply to your access to and use of the
+        website, or any other online or mobile product or service (collectively,
+        the “Services”) of Hostguest limited (“Hostguest,” “we” or “us”). If you
+        are using the Services on behalf of any entity, you represent and
+        warrant that you are authorized to accept these Terms on such entity’s
+        behalf and that such entity will be responsible for your violation of
+        these Terms. Failure to use our Services in accordance with these Terms
+        may result in, among other things, termination or suspension of your
+        rights to use the Services and may subject you to legal action by
+        Hostguest and/or severe civil and/or criminal penalties. We reserve the
+        right to make changes or modifications to these Terms, or any policy or
+        guideline of our Services, at any time and in our sole discretion. If
         Hostguest makes changes to these Terms, we will provide notice of such
         changes. Your continued use of our Services following the posting of
         changes or modifications will constitute your acceptance of such changes
@@ -33,35 +36,51 @@ export default function Terms() {
         email address or your login credentials from a third-party social media
         site. If you register with your email address, you agree to create a
         unique password that you do not use with any other online product or
-        service. By registering for an account, you further agree to (a) provide
-        accurate, truthful, current and complete information; (b) maintain and
-        promptly update your account information upon any changes; (c) maintain
-        the security of your account by protecting your password and restricting
-        access to your account; (d) promptly notify Hostguest if you discover or
-        otherwise suspect any security breaches related to the Services; and (e)
-        take responsibility for all activities that occur under your account and
-        accept all risks of any authorized or unauthorized access. THIRD PARTY
-        TERMS Hostguest may offer the opportunity to purchase products and
-        services from third parties. You acknowledge that such products and
-        services are offered and sold to you by one or more third parties.
-        INTERACTIONS WITH OTHER MEMBERS 3.1 You Have Sole Responsibility When
-        Interacting with Other Members. Our Services provide a platform for
-        members to learn about one another, arrange stays and travel, engage in
-        activities and communicate with one another. Hostguest is not a party
-        to, has no involvement or interest in, makes no representations or
-        warranties as to, and has no responsibility or liability with respect to
-        any communications, transactions, interactions, disputes or any
-        relations whatsoever between you and any other member, person or
-        organization. You are solely responsible for your interactions with
-        other members of our Services. We reserve the right, but have no
-        obligation, to monitor interactions between you and other members of our
-        Services. Remember, the Hostguest Services are just a platform that
-        enable you to communicate and interact with other people around the
-        world. We cannot be responsible for the interactions that you have with
-        other Hostguest members, so please use good judgment and keep safety in
-        mind when you use our Services. 3.2 Identity Verification. We cannot and
-        do not confirm each member’s identity. Although we provide tools
-        intended to assist with identity verification, such as our address
+        service. By registering for an account, you further agree to
+        <ul>
+          <li>
+            (a) provide accurate, truthful, current and complete information;
+          </li>
+          <li>
+            (b) maintain and promptly update your account information upon any
+            changes;
+          </li>
+          <li>
+            (c) maintain the security of your account by protecting your
+            password and restricting access to your account;
+          </li>
+          <li>
+            (d) promptly notify Hostguest if you discover or otherwise suspect
+            any security breaches related to the Services; and{" "}
+          </li>
+          <li>
+            (e) take responsibility for all activities that occur under your
+            account and accept all risks of any authorized or unauthorized
+            access. THIRD PARTY TERMS Hostguest may offer the opportunity to
+            purchase products and services from third parties. You acknowledge
+            that such products and services are offered and sold to you by one
+            or more third parties.
+          </li>
+        </ul>
+        <h5>INTERACTIONS WITH OTHER MEMBERS 3.1</h5>
+        You Have Sole Responsibility When Interacting with Other Members. Our
+        Services provide a platform for members to learn about one another,
+        arrange stays and travel, engage in activities and communicate with one
+        another. Hostguest is not a party to, has no involvement or interest in,
+        makes no representations or warranties as to, and has no responsibility
+        or liability with respect to any communications, transactions,
+        interactions, disputes or any relations whatsoever between you and any
+        other member, person or organization. You are solely responsible for
+        your interactions with other members of our Services. We reserve the
+        right, but have no obligation, to monitor interactions between you and
+        other members of our Services. Remember, the Hostguest Services are just
+        a platform that enable you to communicate and interact with other people
+        around the world. We cannot be responsible for the interactions that you
+        have with other Hostguest members, so please use good judgment and keep
+        safety in mind when you use our Services.
+        <h5>3.2 Identity Verification.</h5>
+        We cannot and do not confirm each member’s identity. Although we provide
+        tools intended to assist with identity verification, such as our address
         verification tool (as described in Section 3.3), you are solely
         responsible for determining the identity and suitability of others with
         whom you may interact through our Services. Hostguest does not represent
@@ -73,80 +92,121 @@ export default function Terms() {
         Services (other than the address-verification tool as described in
         Section 3.3). We encourage you to take precautions when interacting with
         other members, particularly when meeting a stranger in person for the
-        first time. 3.3 Our Address-Verification Tool. Our address verification
-        tool is intended merely to confirm that the postal address a member
-        submits to us is an address at which that member is able to access or
-        receive mail. Hostguest’s address verification tool is not intended to
-        confirm that a member actually resides at a particular address. While
-        this is one of many ways to reduce the risk of misconduct by a member,
-        it is not a guarantee of any member’s identity or good faith. 3.4
-        Member-Hosted Events; Members may organize in-person meetings and host
-        events for other Hostguest members; however, these events are not
-        sponsored or endorsed by Hostguest and members attend such meetings and
-        events at their own risk 3.5 Release. Because our Services are merely a
-        platform, in the event that you have a dispute with one or more members,
-        to the fullest extent permitted by applicable law you release us (and
-        our officers, directors, members, employees, agents and affiliates) from
-        claims, demands and damages (actual and consequential) of every kind and
-        nature, known and unknown, suspected and unsuspected, disclosed and
-        undisclosed, arising out of or in any way connected with such disputes.
-        The Services include interactive areas where you or other members can
-        create, post or store content, messages, materials, data, information,
-        text, music, sound, photos, videos, graphics or other items or materials
-        on the Services (collectively, “Member Content”). You are solely
-        responsible for your use of such interactive areas and agree that your
-        use of these areas is at your own risk. 4.1 Member Content Restrictions.
+        first time.
+        <h5> 3.3 Our Address-Verification Tool.</h5>
+        Our address verification tool is intended merely to confirm that the
+        postal address a member submits to us is an address at which that member
+        is able to access or receive mail. Hostguest’s address verification tool
+        is not intended to confirm that a member actually resides at a
+        particular address. While this is one of many ways to reduce the risk of
+        misconduct by a member, it is not a guarantee of any member’s identity
+        or good faith.
+        <h5> 3.4 Member-Hosted Events;</h5>
+        Members may organize in-person meetings and host events for other
+        Hostguest members; however, these events are not sponsored or endorsed
+        by Hostguest and members attend such meetings and events at their own
+        risk
+        <h5> 3.5 Release.</h5>
+        Because our Services are merely a platform, in the event that you have a
+        dispute with one or more members, to the fullest extent permitted by
+        applicable law you release us (and our officers, directors, members,
+        employees, agents and affiliates) from claims, demands and damages
+        (actual and consequential) of every kind and nature, known and unknown,
+        suspected and unsuspected, disclosed and undisclosed, arising out of or
+        in any way connected with such disputes. The Services include
+        interactive areas where you or other members can create, post or store
+        content, messages, materials, data, information, text, music, sound,
+        photos, videos, graphics or other items or materials on the Services
+        (collectively, “Member Content”). You are solely responsible for your
+        use of such interactive areas and agree that your use of these areas is
+        at your own risk.
+        <h5> 4.1 Member Content Restrictions.</h5>
         You are solely responsible for any Member Content that you submit, post
         or transmit via our Services. You agree not to post, upload to,
         transmit, distribute, store, create or otherwise publish through the
-        Services, Member Content that we believe, in our sole discretion: (a) is
-        unlawful, libelous, defamatory, harassing, threatening, invasive of
-        privacy or publicity rights, or that would otherwise create liability or
-        violate any local, national or international law; (b) contains nudity,
-        sexually explicit content or is otherwise obscene, pornographic,
-        indecent, lewd, suggestive or sexually exploitative of minors; (c) may
-        disparage any ethnic, racial, sexual or religious group by stereotypical
-        depiction or is otherwise abusive or inflammatory; (d) depicts the use
-        of illicit drugs; (e) contains offensive language or images or is
-        otherwise objectionable; (f) incites violence or characterizes violence
-        as acceptable, glamorous or desirable; (g) contains unsolicited
-        promotions, political campaigning, advertising or solicitations, without
-        our prior written consent; (h) contains private or personal information
-        about another person, unless such person has agreed to the disclosure of
-        this information; (i) contains viruses, corrupted data or other harmful,
-        disruptive or destructive file viruses, cancel bots, Trojan horses,
-        harmful code, flood pings, denial-of-service attacks, packet or IP
-        spoofing, forged routing or electronic mail address information or
-        similar methods or technology; (j) may infringe any patent, trademark,
-        trade secret, copyright or other intellectual or proprietary right of
-        any party. By posting Member Content, you represent and warrant that you
-        have the lawful right to distribute and reproduce such Member Content;
-        or (k) would constitute, encourage or provide instructions for a
-        criminal offense or violate the rights of any third party. Hostguest is
-        not responsible for any Member Content that you or other members post,
-        transmit or store through the Services. We have no obligation to post
-        Member Content from you or anyone else and we may, in our sole
-        discretion, edit, remove or delete any Member Content without notice. If
-        you become aware of Member Content that violates these Terms, you may
-        notify of us such content by using the reporting tools provided on our
-        Services. Enforcement of these Terms, however, is solely in our
-        discretion and the absence of enforcement in some instances does not
-        waive of our right to enforce the Terms in other instances. In addition,
-        these Terms do not create a private right of action on the part of any
-        third party or any reasonable expectation that the Services will not
-        contain any content that is prohibited by such rules. 4.2 Member
-        Conduct. By accessing or using the Services, you agree to act
-        responsibly, exercise good judgment and comply with the Community
-        Guidelines. In addition, you agree not to: (a) use the Services in
-        violation of any applicable law or regulation, including promoting or
-        encouraging any illegal activity; (b) infringe the rights of any third
-        party, including without limitation, intellectual property, privacy,
-        publicity or contractual rights; (c) use the Services in any manner that
-        could interfere with, disrupt, negatively affect or inhibit other
-        members from fully enjoying the Services or that could damage, disable,
-        overburden or impair the functioning of the Services in any manner; (d)
-        use our Services in connection with the distribution of spam (which we
-        define as unsolicited bulk e-mail or any other unsolicited messages of a
+        Services, Member Content that we believe, in our sole discretion:
+        <ul>
+          <li>
+            (a) is unlawful, libelous, defamatory, harassing, threatening,
+            invasive of privacy or publicity rights, or that would otherwise
+            create liability or violate any local, national or international
+            law;
+          </li>
+          <li>
+            (b) contains nudity, sexually explicit content or is otherwise
+            obscene, pornographic, indecent, lewd, suggestive or sexually
+            exploitative of minors;{" "}
+          </li>
+          <li>
+            (c) may disparage any ethnic, racial, sexual or religious group by
+            stereotypical depiction or is otherwise abusive or inflammatory;{" "}
+          </li>
+          <li> (d) depicts the use of illicit drugs; </li>
+          <li>
+            {" "}
+            (e) contains offensive language or images or is otherwise
+            objectionable;
+          </li>
+          <li>
+            {" "}
+            (f) incites violence or characterizes violence as acceptable,
+            glamorous or desirable;{" "}
+          </li>
+          <li>
+            {" "}
+            (g) contains unsolicited promotions, political campaigning,
+            advertising or solicitations, without our prior written consent;{" "}
+          </li>
+          <li>
+            (h) contains private or personal information about another person,
+            unless such person has agreed to the disclosure of this information;{" "}
+          </li>
+          <li>
+            {" "}
+            (i) contains viruses, corrupted data or other harmful, disruptive or
+            destructive file viruses, cancel bots, Trojan horses, harmful code,
+            flood pings, denial-of-service attacks, packet or IP spoofing,
+            forged routing or electronic mail address information or similar
+            methods or technology;{" "}
+          </li>
+          <li>
+            (j) may infringe any patent, trademark, trade secret, copyright or
+            other intellectual or proprietary right of any party. By posting
+            Member Content, you represent and warrant that you have the lawful
+            right to distribute and reproduce such Member Content; or{" "}
+          </li>
+          <li>
+            {" "}
+            (k) would constitute, encourage or provide instructions for a
+            criminal offense or violate the rights of any third party. Hostguest
+            is not responsible for any Member Content that you or other members
+            post, transmit or store through the Services. We have no obligation
+            to post Member Content from you or anyone else and we may, in our
+            sole discretion, edit, remove or delete any Member Content without
+            notice. If you become aware of Member Content that violates these
+            Terms, you may notify of us such content by using the reporting
+            tools provided on our Services. Enforcement of these Terms, however,
+            is solely in our discretion and the absence of enforcement in some
+            instances does not waive of our right to enforce the Terms in other
+            instances. In addition, these Terms do not create a private right of
+            action on the part of any third party or any reasonable expectation
+            that the Services will not contain any content that is prohibited by
+            such rules.{" "}
+          </li>
+        </ul>
+        <h5> 4.2 Member Conduct.</h5>
+        By accessing or using the Services, you agree to act responsibly,
+        exercise good judgment and comply with the Community Guidelines. In
+        addition, you agree not to: (a) use the Services in violation of any
+        applicable law or regulation, including promoting or encouraging any
+        illegal activity; (b) infringe the rights of any third party, including
+        without limitation, intellectual property, privacy, publicity or
+        contractual rights; (c) use the Services in any manner that could
+        interfere with, disrupt, negatively affect or inhibit other members from
+        fully enjoying the Services or that could damage, disable, overburden or
+        impair the functioning of the Services in any manner; (d) use our
+        Services in connection with the distribution of spam (which we define as
+        unsolicited bulk e-mail or any other unsolicited messages of a
         commercial, religious, romantic, political or other nature not within
         the intended purposes of the Services); (e) stalk, intimidate, threaten
         or otherwise harass or cause discomfort to any other member of our
