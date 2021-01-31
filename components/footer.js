@@ -1,4 +1,4 @@
-import { Divider } from "antd";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -16,36 +16,38 @@ export default function Footer() {
             </div>
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 lg:mt-12">
               <nav className="flex flex-wrap justify-center space-x-6">
-                <a
-                  href="#"
-                  className="font-normal text-sm hover:text-pink-600 mb-2"
-                >
-                  Privacy
-                </a>
-                <a
-                  href="#"
-                  className="font-normal text-sm hover:text-pink-600 mb-2"
-                >
-                  Content Terms Notice
-                </a>
-                <a
-                  href="#"
-                  className="font-normal text-sm hover:text-pink-600 mb-2"
-                >
-                  Legal
-                </a>
-                <a
-                  href="#"
-                  className="font-normal text-sm hover:text-pink-600 mb-2"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="font-normal text-sm hover:text-pink-600 mb-2"
-                >
-                  Landing Pages
-                </a>
+                <Link href="/terms">
+                  <a
+                    href="#"
+                    className="font-normal text-sm hover:text-pink-600 mb-2"
+                  >
+                    Privacy
+                  </a>
+                </Link>
+                <Link href="/terms">
+                  <a
+                    href="#"
+                    className="font-normal text-sm hover:text-pink-600 mb-2"
+                  >
+                    Content Terms Notice
+                  </a>
+                </Link>
+                <Link href="/terms">
+                  <a
+                    href="#"
+                    className="font-normal text-sm hover:text-pink-600 mb-2"
+                  >
+                    Legal
+                  </a>
+                </Link>
+                <Link href="/terms">
+                  <a
+                    href="#"
+                    className="font-normal text-sm hover:text-pink-600 mb-2"
+                  >
+                    Features
+                  </a>
+                </Link>
               </nav>
               <nav className="flex items-center space-x-2">
                 <a
