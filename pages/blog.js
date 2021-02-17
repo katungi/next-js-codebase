@@ -25,3 +25,4 @@ const IndexPage = (props) => (
     ))}
   </ul>
 );
+

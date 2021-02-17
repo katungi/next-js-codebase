@@ -20,6 +20,7 @@ export async function getStaticPaths() {
   // { fallback: false } means posts not found should 404.
   return { paths, fallback: false };
 }
+
 export async function getStaticProps(context) {
   const post = await getSinglePost(context.params.slug);
 

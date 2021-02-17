@@ -1,6 +1,7 @@
 import "antd/dist/antd.css";
 import "../styles/tailwind.css";
 import "../styles/style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from "next/head";
 import Layout from "../components/layout";
 import { QueryClient, QueryClientProvider } from "react-query";
