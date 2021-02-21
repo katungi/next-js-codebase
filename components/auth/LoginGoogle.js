@@ -1,6 +1,7 @@
 import Router from "next/router";
 import GoogleLogin from "react-google-login";
 import { loginWithGoogle, authenticate, isAuth } from "../../Hooks/auth";
+import router from 'next/router'
 
 const LoginGoogle = () => {
   const responseGoogle = (response) => {
@@ -14,9 +15,9 @@ const LoginGoogle = () => {
         } else {
           authenticate(data, () => {
             if (isAuth()) {
-              Router.push(`/experiences`);
+              router.push(`/experiences`);
             } else {
-              Router.push(`/`);
+              router.push(`/`);
             }
           });
         }

@@ -79,14 +79,25 @@ export default function header() {
             About Us
           </a>
         </Link>
-        <Link href='/categories'>
-          <a
-            href=''
-            className='mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2'
-          >
-            Categories
-          </a>
-        </Link>
+        {!isAuth() ? (
+          <Link href='/categories'>
+            <a
+              href=''
+              className='mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2'
+            >
+              Categories
+            </a>
+          </Link>
+        ) : (
+          <Link href='/experiences'>
+            <a
+              href=''
+              className='mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-pink-200 hover:text-white sm:ml-2'
+            >
+              Experiences
+            </a>
+          </Link>
+        )}
 
         {!isAuth() ? (
           <>
