@@ -42,7 +42,7 @@ export default function Cards({ experience }) {
                     <div className="flex-auto flex space-x-3">
                       <Link
                         href="/experiences/[id]"
-                        as={`/experiences/${experience._id}`}
+                        
                       >
                         <button className="w-1/2 flex items-center justify-center rounded-full bg-pink-700 text-white">
                           check it Out

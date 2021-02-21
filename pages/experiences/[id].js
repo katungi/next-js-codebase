@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import ErrorPage from 'next/error';
 import Router from 'next/router';
 import fetch from 'node-fetch';
 import axios from 'axios';
-import { Button, Modal, Result } from 'antd';
+import { Button } from 'antd';
 import { CalendarOutlined } from '@ant-design/icons';
 import cookie from 'js-cookie';
 import { isAuth } from '../../Hooks/auth';
 import Footer from '../../components/footer';
+import Link from 'next/link';
 
 export default function Post({ data }) {
   if (!data) {
@@ -18,6 +18,7 @@ export default function Post({ data }) {
     let id = isAuth()._id;
     let token = cookie.get('token');
     console.log(token);
+    console.log(id);
     let url = `https://hostguest-backend.herokuapp.com/api/experiences/${data._id}/join`;
     axios
       .post(
@@ -29,10 +30,13 @@ export default function Post({ data }) {
           },
         }
       )
-      .then((res) => {
-        Router.push('/experiences');
-        let id = res.id;
-        console.log(`You just Booked experience ID number ${res.id}`);
+      .then(({ data }) => {
+        //console.log(data.id);
+        console.log(`You just Booked experience ID number ${data.id}`);
+        Router.push({
+          pathname: '/success/[id]',
+          query: { id: data.id },
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -128,7 +132,7 @@ export default function Post({ data }) {
           </p>
           <br></br>
           <div className='ml-4'>
-            {!isAuth ? (
+            {!isAuth() ? (
               <Link href='/signup'>
                 <Button
                   type='primary'
