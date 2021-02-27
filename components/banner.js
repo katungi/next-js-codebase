@@ -25,7 +25,7 @@ export default function banner() {
                   </p>
                   <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
                     <Link href='/experiences'>
-                      <a className='py-6 px-10 bg-pink-500 rounded-full text-md text-white hover:bg-pink-300 transition duration-300 ease-in-out flex items-center animate-bounce'>
+                      <a className='py-2 px-4 bg-pink-500 rounded-full text-md text-white hover:bg-pink-300 transition duration-300 ease-in-out flex items-center animate-bounce'>
                         Check Out Experiences{' '}
                       </a>
                     </Link>

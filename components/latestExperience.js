@@ -1,6 +1,6 @@
 import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
-import ExperienceCards from '../components/experienceCards/ExperienceCards';
+import LatestExperinceCard from '../components/experienceCards/LatestExperienceCard';
 import axios from 'axios';
 import ExperienceSkeleton from '../components/experienceCards/ExperienceSkeletons';
 
@@ -49,13 +49,13 @@ export default function Latest() {
 
   return (
     <>
-      <div className='h-screen overflow-x-scroll'>
-        <h3 className='font-bold bold text-2xl lg:mb-2 mb-4 leading-none text-pink-600'>
+      <div className=''>
+        <h3 className='font-bold bold text-2xl lg:mb-2 mb-4 ml-6 leading-none text-pink-600'>
           Latest Experiences You might Like
         </h3>
-        <section className='flex items-start flex-wrap justify-between lg:my-8 my-6'>
+        <section className=''>
           {data?.experiences?.map((experience, id) => (
-            <ExperienceCards experience={experience} key={id} />
+            <LatestExperinceCard experience={experience} key={id} />
           ))}
         </section>
       </div>
@@ -65,9 +65,7 @@ export default function Latest() {
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
-
   await queryClient.prefetchQuery('experiences', () => getExperiences());
-
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
