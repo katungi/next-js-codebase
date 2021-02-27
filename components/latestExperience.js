@@ -17,6 +17,9 @@ export default function Latest() {
   if (isLoading)
     return (
       <>
+        <h3 className='font-bold bold text-2xl lg:mb-2 mb-4 ml-6 leading-none text-pink-600'>
+          Upcoming Experiences
+        </h3>
         <div className='px-4 py-2'>
           <div className='animate-pulse'>
             <ExperienceSkeleton type='long' />
@@ -51,7 +54,7 @@ export default function Latest() {
     <>
       <div className=''>
         <h3 className='font-bold bold text-2xl lg:mb-2 mb-4 ml-6 leading-none text-pink-600'>
-          Latest Experiences You might Like
+          Upcoming Experiences
         </h3>
         <section className=''>
           {data?.experiences?.map((experience, id) => (

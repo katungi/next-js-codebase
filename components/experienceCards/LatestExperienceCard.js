@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function LatestExperinceCard({ experience }) {
   return (
     <Link href='/experiences/[id]' as={`/experiences/${experience._id}`}>
-      <div className='mt-6 overflow-x-auto overflow-y-hidden'>
+      <div className='sm:mt-0 w-80 flex-shrink-0 mt-10 sm:ml-4 ml-4'>
         <div className='px-4 inline-flex sm:pt-2 sm:pb-8 xl:px-8'>
           <div className='ml-4 mt-10 w-80 flex-shrink-0'>
             <div>
@@ -43,7 +43,7 @@ export default function LatestExperinceCard({ experience }) {
                       href='/experiences/[id]'
                       as={`/experiences/${experience._id}`}
                     >
-                      <a className='py-2 px-5 bg-pink-500 rounded-lg text-xs text-white hover:bg-pink-300 transition duration-300 ease-in-out flex items-center'>
+                      <a className='py-2 px-5 bg-pink-500 rounded-lg text-xs text-white hover:bg-pink-300 transition duration-300 ease-in-out flex items-center animate-bounce'>
                         Check Out Experience{' '}
                       </a>
                     </Link>
