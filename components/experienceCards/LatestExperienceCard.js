@@ -25,7 +25,7 @@ export default function LatestExperinceCard({ experience }) {
                     <span className='inline-block px-2 py-1 leading-none bg-pink-400 text-white rounded-full font-semibold tracking-wide text-xs'>
                       Available
                     </span>
-                    <div className='ml-2 text-xs text-gray-600 font-semibold uppercase tracking-wide'>
+                    <div className='ml-2 text-xs text-gray-600 font-semibold tracking-wide'>
                       Joined by • {experience.joinedPeopleCount} guests
                     </div>
                   </div>

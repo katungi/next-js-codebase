@@ -2,7 +2,7 @@ import fetch from "isomorphic-fetch";
 import cookie from "js-cookie";
 
 export const signup = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/api/signup`, {
+  return fetch(`https://hostguest.herokuapp.com/api/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -17,7 +17,7 @@ export const signup = (user) => {
 };
 
 export const signin = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/api/signin`, {
+  return fetch(`https://hostguest.herokuapp.com/api/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -36,7 +36,7 @@ export const signout = (next) => {
   removeLocalStorage("user");
   next();
 
-  return fetch(`https://hostguest-backend.herokuapp.com/api/signout`, {
+  return fetch(`https://hostguest.herokuapp.com/api/signout`, {
     method: "GET",
   })
     .then((response) => {
@@ -110,7 +110,7 @@ export const updateUser = (user, next) => {
 };
 
 export const preSignup = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/api/pre-signup`, {
+  return fetch(`https://hostguest.herokuapp.com/api/pre-signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -125,7 +125,7 @@ export const preSignup = (user) => {
 };
 
 export const loginWithGoogle = (user) => {
-  return fetch(`https://hostguest-backend.herokuapp.com/api/google-login`, {
+  return fetch(`https://hostguest.herokuapp.com/api/google-login`, {
     method: "POST",
     headers: {
       Accept: "application/json",

@@ -36,7 +36,7 @@ export async function getServerSideProps({ params, res }) {
   try {
     const { id } = params;
     const result = await fetch(
-      `https://hostguest-backend.herokuapp.com/api/experiences/${id}`
+      `https://hostguest.herokuapp.com/api/experiences/${id}`
     );
     const data = await result.json();
     return {

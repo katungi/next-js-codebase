@@ -5,8 +5,8 @@ import CategoryCards from "../components/experienceCards/CategoryCards";
 import ExperienceSkeleton from "../components/experienceCards/ExperienceSkeletons";
 
 export default function Categories() {
-  const getCategories = async () => {
-    const { data } = await axios.get(`https://hostguest-backend.herokuapp.com/api/categories`);
+  const getCategories = async () => {https://hostguest.herokuapp.com/
+    const { data } = await axios.get(`https://hostguest.herokuapp.com/api/categories`);
     return data;
   };
   const { data, isLoading } = useQuery("categories", getCategories);

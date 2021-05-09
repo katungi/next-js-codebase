@@ -19,7 +19,7 @@ export default function Post({ data }) {
     let token = cookie.get('token');
     console.log(token);
     console.log(id);
-    let url = `https://hostguest-backend.herokuapp.com/api/experiences/${data._id}/join`;
+    let url = `https://hostguest.herokuapp.com/api/experiences/${data._id}/join`;
     axios
       .post(
         `${url}`,
@@ -168,9 +168,7 @@ export async function getServerSideProps({ params, res }) {
   try {
     const { id } = params;
 
-    const result = await fetch(
-      `https://hostguest-backend.herokuapp.com/api/experiences/${id}`
-    );
+    const result = await fetch(`https://.herokuapp.com/api/experiences/${id}`);
 
     const data = await result.json();
     return {

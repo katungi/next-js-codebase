@@ -6,7 +6,7 @@ import ExperienceSkeleton from '../components/experienceCards/ExperienceSkeleton
 
 const getExperiences = async () => {
   const { data } = await axios.get(
-    `https://hostguest-backend.herokuapp.com/api/experiences`
+    `https://hostguest.herokuapp.com/api/experiences`
   );
   return data;
 };
